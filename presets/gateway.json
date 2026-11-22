@@ -5,9 +5,25 @@
   "description": "网关层组合：site 承担反向代理/网关（唯一常驻）、ssl 提供证书、dns 管理区域与记录、firewall 管理端口与防火墙；dns 为基础级，非开箱可用。",
   "out_of_box": false,
   "plugins": [
-    { "id": "site", "version": "0.1.0", "desired": "enabled" },
-    { "id": "ssl", "version": "0.2.0", "desired": "enabled" },
-    { "id": "dns", "version": "0.1.0", "desired": "enabled" },
-    { "id": "firewall", "version": "0.2.0", "desired": "enabled" }
+    {
+      "id": "site",
+      "version": "0.2.0",
+      "desired": "enabled"
+    },
+    {
+      "id": "ssl",
+      "version": "0.2.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "dns",
+      "version": "0.1.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "firewall",
+      "version": "0.2.1",
+      "desired": "enabled"
+    }
   ]
 }

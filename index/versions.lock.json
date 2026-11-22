@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "note": "版本→sha 校验基线（非信任源；信任根是 plugins.json 的 ed25519 签名）。每次发版必须把新版本追加到对应 id 的 versions 数组，validate-index.sh 会拒绝同版本换 sha、版本回退或跳版。",
+  "plugins": {
+    "echo": [
+      {
+        "version": "0.1.1",
+        "sha256": "69007a00e9871fbe34b4b184de7cb25a334886d6608b3d64c1038eb4afdb6e39"
+      },
+      {
+        "version": "0.1.2",
+        "sha256": "57dfbec28bca85ca1713e678ceec7f15d016def8ea2e1a488d58364014a931f6"
+      }
+    ],
+    "site": [
+      {
+        "version": "0.1.0",
+        "sha256": "1273b55b3f6cebad3debceb817cb192639be9500f74bfa01d210285c6e3ad88f"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "5cb01e7bd9f391dd00d171750d48b1b46185cec89cde23b27b85ea72a49058e9"
+      }
+    ],
+    "file": [
+      {
+        "version": "0.2.0",
+        "sha256": "a4f340f06416a596a390cab43291d77be520e6fbfa583298a8f41f8b71daea56"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "5ae179a16ff330213e28a064a3448af0b36884eb4b0560c001fc32fe3754d4f0"
+      }
+    ],
+    "ssl": [
+      {
+        "version": "0.2.0",
+        "sha256": "af6bb5398a940fdc9d03fa17ef1f2c98c510d4a2c83fbe4ae8633cb5bcb620df"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "8a75cd70c1deeacf87868f28254a5830f7be67c8ceaf2c946a428a3d43d36eb9"
+      }
+    ],
+    "integrity": [
+      {
+        "version": "0.1.0",
+        "sha256": "1b51206c0dafe8a4150fcd4b1e2e868cdf0215fff289fbb805ff8db9e9680cf5"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "748ff72ac7853c3521e9366fa84def5b3ff4ee3a6063501d98c6f533ff71db4b"
+      }
+    ],
+    "cron": [
+      {
+        "version": "0.2.0",
+        "sha256": "4d957c1cc2b16c64fa0d268b7f623352f142ca5d8f784c94baf8865ba6f9a3fe"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "3be9ce4ae6c3203783fe0ce05dd487a41bd204a8cec4e3d69a207e3c919dbfdd"
+      }
+    ],
+    "ssh-guard": [
+      {
+        "version": "0.1.0",
+        "sha256": "220be885dac2822804f835d6a9156b4eb865ca3d07a34ec67ae66da0097b7519"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "b840858c49745bd4dcc7701b28bba3c9a8d2385de669fa7c0be321a319771d5e"
+      }
+    ],
+    "monitor": [
+      {
+        "version": "0.1.0",
+        "sha256": "1fdbd2d9e2c53874064542123275b10e90187464b78d3934562213ac3053d3b9"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "1adacbceff65123564194a1ec99172c3ad40d97d6dedc1d9f491f2cb658e82b5"
+      }
+    ],
+    "logs": [
+      {
+        "version": "0.2.0",
+        "sha256": "b503ad9e29d3b52cec2bff07594827855a1b8b50b08cc94ac84908fd9bc4bc30"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "b5127b397424cf433656a9d526aae8619adb27f022eea6ec81c202b16e649932"
+      }
+    ],
+    "dns": [
+      {
+        "version": "0.1.0",
+        "sha256": "2ed7da0452a21035535affe6691e005350dc5eeb72634ff1f5b34b491f3cae46"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "f9843ee8a11ef5c217f61699b15ab969b08d5b4d743f2d4e282a30aeb9332d09"
+      }
+    ],
+    "runtime-php": [
+      {
+        "version": "0.1.0",
+        "sha256": "8d8a51baff48f7aa8f7b029b3aa0c954e24d25c9e36bbc602624243e033386ac"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "4706b8f9f667c75940cc55d64a7cdcc06cae55ead44bd39c0368099d6da04fca"
+      }
+    ],
+    "runtime-node": [
+      {
+        "version": "0.1.0",
+        "sha256": "0d74850e43e8566c278e0e6f7e0d7aea05de949203f5a58850dcdc36de842d5f"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "2d92f0474167c51deb592583e627bfe943596931c5eee717b7341bb5a84db674"
+      }
+    ],
+    "runtime-python": [
+      {
+        "version": "0.1.0",
+        "sha256": "410b67451edda9254eec54c7167ebac3a158f4a4cdcd75c223a3c1f49b38c85b"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "3bace78010e1cd422c19e742050eb25f937014517e2550d594107c9817531f27"
+      }
+    ],
+    "db-mysql": [
+      {
+        "version": "0.1.0",
+        "sha256": "7e02be455a74cde191d9c9295d1925b315f9ef30b490ea3dbc032c35fac92595"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "c1ba9c79c81aa531850fee3d73c5fe32d9948540cf9ef559d956cbc20031a3d0"
+      }
+    ],
+    "db-postgres": [
+      {
+        "version": "0.1.0",
+        "sha256": "fbbe9329e83164df8b1cbe852f0d5a6a47d6306805042793b93b99cb718b3742"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "49415fff5d2e4f83ce5ddbb0ade0e3f946a33094226c4dd71908a5825ced1ef6"
+      }
+    ],
+    "redis": [
+      {
+        "version": "0.2.0",
+        "sha256": "a068a67d38effca588bc06519147260edebb501aee0d1f8f3a0b0bc0a38dc533"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "4f50ac14d89824a25caefb5fbbe5741bf8a4c9edd7871795157dd534d4923abf"
+      }
+    ],
+    "backup": [
+      {
+        "version": "0.2.0",
+        "sha256": "53885cbbd901419703ccab101546164f4a75cbe42071b1c0bcb53c0aa19fc023"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "a84b4eb294a267466721f3e326e8e7c371ae134767081d572120f46f71378ece"
+      }
+    ],
+    "firewall": [
+      {
+        "version": "0.2.0",
+        "sha256": "959f357a4aef382077fd3482772a0066bf860fcfe38ff7deab1349b55968058f"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "1a77a518397156bc5952a64ce55ba81145f9f43335c9f2c8a277bdc54b5c280a"
+      }
+    ],
+    "waf": [
+      {
+        "version": "0.1.0",
+        "sha256": "ba7a7e59b48339d4ab081c02b97c160baf286b4f11c181e1ce8e6ba6f9e1f640"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "6d7c384d919429233146b043ae38d6b90dc2afdad7a2f8bff6077c0c09007f5a"
+      }
+    ],
+    "container": [
+      {
+        "version": "0.1.0",
+        "sha256": "4ae731fb056b0dd1d8d7afaf479b6be029953468e54f52d75593c5b9a1f8b9c5"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "da2c5f6f482f95e105a76d7db2ff3a2108ebd2b0db771698fa19ec9ff966f2dd"
+      }
+    ],
+    "app-deploy": [
+      {
+        "version": "0.1.0",
+        "sha256": "c7a6f57dd8a3dcd6e61f6094a703ac3afeceecf770f9b84b5a5c7c0b4a26ecf9"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "8d2d9c863064dcc1ade0371c66d68187c2c699b7623b9dfb83f617dc97b7368d"
+      }
+    ],
+    "terminal": [
+      {
+        "version": "0.1.0",
+        "sha256": "65025fd19ea5127461b462972341fafc8e105595787a12c6f3087cec56d3972e"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "0e75b2ae0171675a09b4c31c1a8a230238d0511a46ac73a4365811b5fbc0ca36"
+      }
+    ],
+    "process": [
+      {
+        "version": "0.1.0",
+        "sha256": "d5e0865b4e17b6ab6cf78fe8b9e6cac0ebc3f22635dca40f1dfb16074b2ca42e"
+      },
+      {
+        "version": "0.1.1",
+        "sha256": "feb979e360a592baa4d4afa034243e3f72c84aa93a00bfe9b939df9a67fe51a2"
+      }
+    ],
+    "discover": [
+      {
+        "version": "0.1.0",
+        "sha256": "17deef1393cebcb0908323f0e7f34716f5dc4dd5b30dce92367665280ef84bb6"
+      }
+    ]
+  }
+}

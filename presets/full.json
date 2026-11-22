@@ -5,26 +5,110 @@
   "description": "引用索引中全部 21 个插件：site/echo/monitor 三个 resident 默认启用（常驻 3/3），其余 18 个 lazy 插件引用但默认 disabled、按需启用；含 basic 级插件，非开箱可用。db-mysql 与 db-postgres 索引声明互斥，两者均引用但仅 db-mysql 可由用户按场景启用。",
   "out_of_box": false,
   "plugins": [
-    { "id": "echo", "version": "0.1.1", "desired": "enabled" },
-    { "id": "site", "version": "0.1.0", "desired": "enabled" },
-    { "id": "file", "version": "0.2.0", "desired": "disabled" },
-    { "id": "ssl", "version": "0.2.0", "desired": "disabled" },
-    { "id": "integrity", "version": "0.1.0", "desired": "disabled" },
-    { "id": "cron", "version": "0.2.0", "desired": "disabled" },
-    { "id": "ssh-guard", "version": "0.1.0", "desired": "disabled" },
-    { "id": "monitor", "version": "0.1.0", "desired": "enabled" },
-    { "id": "logs", "version": "0.2.0", "desired": "disabled" },
-    { "id": "dns", "version": "0.1.0", "desired": "disabled" },
-    { "id": "runtime-php", "version": "0.1.0", "desired": "disabled" },
-    { "id": "runtime-node", "version": "0.1.0", "desired": "disabled" },
-    { "id": "runtime-python", "version": "0.1.0", "desired": "disabled" },
-    { "id": "db-mysql", "version": "0.1.0", "desired": "disabled" },
-    { "id": "db-postgres", "version": "0.1.0", "desired": "disabled" },
-    { "id": "redis", "version": "0.2.0", "desired": "disabled" },
-    { "id": "backup", "version": "0.2.0", "desired": "disabled" },
-    { "id": "firewall", "version": "0.2.0", "desired": "disabled" },
-    { "id": "waf", "version": "0.1.0", "desired": "disabled" },
-    { "id": "container", "version": "0.1.0", "desired": "disabled" },
-    { "id": "app-deploy", "version": "0.1.0", "desired": "disabled" }
+    {
+      "id": "echo",
+      "version": "0.1.2",
+      "desired": "enabled"
+    },
+    {
+      "id": "site",
+      "version": "0.2.0",
+      "desired": "enabled"
+    },
+    {
+      "id": "file",
+      "version": "0.2.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "ssl",
+      "version": "0.2.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "integrity",
+      "version": "0.1.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "cron",
+      "version": "0.2.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "ssh-guard",
+      "version": "0.1.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "monitor",
+      "version": "0.1.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "logs",
+      "version": "0.2.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "dns",
+      "version": "0.1.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "runtime-php",
+      "version": "0.1.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "runtime-node",
+      "version": "0.1.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "runtime-python",
+      "version": "0.1.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "db-mysql",
+      "version": "0.2.0",
+      "desired": "disabled"
+    },
+    {
+      "id": "db-postgres",
+      "version": "0.1.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "redis",
+      "version": "0.3.0",
+      "desired": "disabled"
+    },
+    {
+      "id": "backup",
+      "version": "0.2.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "firewall",
+      "version": "0.2.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "waf",
+      "version": "0.1.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "container",
+      "version": "0.2.0",
+      "desired": "disabled"
+    },
+    {
+      "id": "app-deploy",
+      "version": "0.1.1",
+      "desired": "disabled"
+    }
   ]
 }

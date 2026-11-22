@@ -5,10 +5,30 @@
   "description": "纯数据场景：db-mysql 管理 MySQL/MariaDB，file 文件管理、backup 备份、redis 缓存协作；db-postgres 与 db-mysql 在索引中声明互斥，故仅引用并标记 disabled、按需切换。全部生产级，开箱可用。",
   "out_of_box": true,
   "plugins": [
-    { "id": "db-mysql", "version": "0.1.0", "desired": "enabled" },
-    { "id": "db-postgres", "version": "0.1.0", "desired": "disabled" },
-    { "id": "file", "version": "0.2.0", "desired": "enabled" },
-    { "id": "backup", "version": "0.2.0", "desired": "enabled" },
-    { "id": "redis", "version": "0.2.0", "desired": "enabled" }
+    {
+      "id": "db-mysql",
+      "version": "0.2.0",
+      "desired": "enabled"
+    },
+    {
+      "id": "db-postgres",
+      "version": "0.1.1",
+      "desired": "disabled"
+    },
+    {
+      "id": "file",
+      "version": "0.2.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "backup",
+      "version": "0.2.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "redis",
+      "version": "0.3.0",
+      "desired": "enabled"
+    }
   ]
 }

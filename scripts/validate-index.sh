@@ -7,7 +7,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 INDEX="$ROOT/index/plugins.json"
 SIG="$ROOT/index/plugins.json.sig"
 # 内置演示公钥（hex，32 字节）。生产应由内核二进制内置同一把公钥。
-PUB_HEX="d04250c5ec0459afa3e5405baaafd89fc7670cf78d12fc3fee484f5a285c47c9"
+PUB_HEX="b4c4523acc5ed694090a4fe36f994d32a6cb6f5059cedd7e61c4895e42af32b5"
 PUB_DER="$ROOT/.validate-pub.der"
 trap 'rm -f "$PUB_DER"' EXIT
 
@@ -55,6 +55,54 @@ for i, item in enumerate(plugins):
     if item["lifecycle"] not in ("resident", "lazy", "oneshot"):
         sys.exit(f"[FAIL] {pid}.lifecycle 非法")
 print("[OK] schema / 必填字段 / id 唯一 / sha256 格式通过（%d 条）" % len(plugins))
+
+# 1b) 版本单调递增 + 同版本 sha 唯一：对照 index/versions.lock.json 基线。
+#     基线不是信任源（信任根是 plugins.json 的 ed25519 签名），而是发版流程的"版本→sha 账本"：
+#     同 id@version 换 sha、版本回退/跳版、两个版本同 sha，都会在这里被拒绝。
+lock_path = os.path.join(os.path.dirname(p), "versions.lock.json")
+if not os.path.isfile(lock_path):
+    sys.exit("[FAIL] 缺少版本基线 %s（每次发版必须追加新版本与 sha）" % lock_path)
+try:
+    lock = json.load(open(lock_path, encoding="utf-8"))
+except Exception as e:
+    sys.exit("[FAIL] versions.lock.json 解析失败: %s" % e)
+if lock.get("schema_version") != 1 or not isinstance(lock.get("plugins"), dict):
+    sys.exit("[FAIL] versions.lock.json schema 非法")
+def ver_tuple(v):
+    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", v or ""):
+        return None
+    return tuple(int(x) for x in v.split("."))
+seen = set()
+for item in plugins:
+    key = item["id"] + "@" + item["version"]
+    if key in seen:
+        sys.exit("[FAIL] 同一 id@version 出现多次: %s" % key)
+    seen.add(key)
+    hist = lock["plugins"].get(item["id"])
+    if not isinstance(hist, list) or not hist:
+        sys.exit("[FAIL] 基线缺少 %s 的版本历史" % item["id"])
+    versions, shas = [], set()
+    for h in hist:
+        hv, hs = str(h.get("version", "")), str(h.get("sha256", ""))
+        if ver_tuple(hv) is None:
+            sys.exit("[FAIL] 基线 %s 版本非法: %r" % (item["id"], hv))
+        if not re.fullmatch(r"[0-9a-f]{64}", hs):
+            sys.exit("[FAIL] 基线 %s@%s sha256 非法" % (item["id"], hv))
+        if hv in versions:
+            sys.exit("[FAIL] 基线 %s 版本重复: %s" % (item["id"], hv))
+        if hs in shas:
+            sys.exit("[FAIL] %s 两个版本共用同一 sha（说明改了包却没 bump）: %s" % (item["id"], hs))
+        versions.append(hv); shas.add(hs)
+    if [ver_tuple(v) for v in versions] != sorted(ver_tuple(v) for v in versions):
+        sys.exit("[FAIL] 基线 %s 版本非严格递增: %s" % (item["id"], versions))
+    last = hist[-1]
+    if item["version"] != last["version"] or item["sha256"] != last["sha256"]:
+        sys.exit("[FAIL] 索引 %s@%s sha=%s 与基线最新 %s@%s sha=%s 不一致："
+                 "改包必须 bump 版本并追加基线，禁止同版本换 sha"
+                 % (item["id"], item["version"], item["sha256"][:12],
+                    item["id"], last["version"], last["sha256"][:12]))
+print("[OK] 版本单调递增 / 同 id@version 唯一 sha 校验通过（基线 %d 条）" % len(lock["plugins"]))
+
 # 预设引用可解析：presets/ 为空时视为占位通过；存在 JSON 时逐条解析。
 checked = 0
 if os.path.isdir(presets):

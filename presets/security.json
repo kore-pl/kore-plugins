@@ -5,10 +5,30 @@
   "description": "安全加固套件：ssl 管理证书、ssh-guard SSH 加固、integrity 关键文件完整性、firewall 端口与防火墙、waf Web 应用防护；含基础级 ssh-guard/integrity/waf，非开箱可用。",
   "out_of_box": false,
   "plugins": [
-    { "id": "ssh-guard", "version": "0.1.0", "desired": "enabled" },
-    { "id": "integrity", "version": "0.1.0", "desired": "enabled" },
-    { "id": "ssl", "version": "0.2.0", "desired": "enabled" },
-    { "id": "firewall", "version": "0.2.0", "desired": "enabled" },
-    { "id": "waf", "version": "0.1.0", "desired": "enabled" }
+    {
+      "id": "ssh-guard",
+      "version": "0.1.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "integrity",
+      "version": "0.1.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "ssl",
+      "version": "0.2.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "firewall",
+      "version": "0.2.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "waf",
+      "version": "0.1.1",
+      "desired": "enabled"
+    }
   ]
 }

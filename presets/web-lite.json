@@ -5,8 +5,20 @@
   "description": "最小动态 Web 能力：site 提供站点与域名管理（唯一常驻）、ssl 提供证书与自动续期、runtime-php 承载 PHP 动态请求；三者均为生产级，开箱可用。",
   "out_of_box": true,
   "plugins": [
-    { "id": "site", "version": "0.1.0", "desired": "enabled" },
-    { "id": "ssl", "version": "0.2.0", "desired": "enabled" },
-    { "id": "runtime-php", "version": "0.1.0", "desired": "enabled" }
+    {
+      "id": "site",
+      "version": "0.2.0",
+      "desired": "enabled"
+    },
+    {
+      "id": "ssl",
+      "version": "0.2.1",
+      "desired": "enabled"
+    },
+    {
+      "id": "runtime-php",
+      "version": "0.1.1",
+      "desired": "enabled"
+    }
   ]
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 — 2026-11-23
+
+- 23 个插件版本 bump（4 个 minor、19 个 patch；`discover` 无产物变化不 bump），索引同步 `version` / `sha256` / `size_bytes` / `download_url`。
+- 新增 `index/versions.lock.json` 发版账本：`validate-index.sh` 增加「`id@version` 唯一 sha、版本单调递增、同版本换 sha 拒绝」校验。
+- 8 个预设的固定版本同步到新版本；`market/plugins.js` 重建。
+- 第十八次重签：新 ed25519 密钥对，公钥同步 `kore/internal/core/market/verify.go` 与 `scripts/validate-index.sh`；正例 exit 0、反例非 0、24 条包 sha 核对 0 差异。
+
 ## 0.1.0 — 2026-11-22
 
 - 新增 `index/plugins.json`（schema_version=1）：echo 0.1.1 / site 0.1.0，摘要为实测 sha256。
