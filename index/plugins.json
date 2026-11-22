@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "plugins": [
+    {
+      "id": "echo",
+      "name": "Echo 验证插件",
+      "version": "0.1.1",
+      "depth_level": "basic",
+      "lifecycle": "resident",
+      "size_bytes": 1258133,
+      "sha256": "eaa34f251e18b9c3f4a186c420d62bec9f31a37c61963514c4b856160ef4219c",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-echo/releases/download/v0.1.1/echo-0.1.1.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": ["ops"]
+    },
+    {
+      "id": "site",
+      "name": "Nginx 站点管理插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "resident",
+      "size_bytes": 1363615,
+      "sha256": "59b107badc27ce1285631dc2c2989db41da5a702130c26bffc1b840b3801520f",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-site/releases/download/v0.1.0/site-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": ["web", "ops"]
+    }
+  ]
+}
