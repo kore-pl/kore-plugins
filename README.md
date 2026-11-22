@@ -35,6 +35,8 @@ bash scripts/build-market.sh   # 生成 market/plugins.js（断网可开，构�
 
 首两条：`echo 0.1.1`（basic，sha256 `eaa34f…4219c`）、`site 0.1.0`（production，sha256 `59b107…520f`），摘要均为对应 `dist/*.tar.gz` 的实测值。
 
+> 口径澄清：echo 为验证件，`depth_level=basic` 是 schema 占位、不参与评级；12 生产级 + 8 基础级只数 20 个产品插件。
+
 ## 场景预设（`presets/`）
 
 8 类预设均为 `schema_version=1` 的 JSON，含 `id / name / description / out_of_box / plugins[]`，每项插件引用 `{id, version, desired}`（`desired` ∈ `enabled|disabled`）。**只引用索引中真实存在的插件 id**——当前仅 `echo 0.1.1`（basic）、`site 0.1.0`（production）；未入索引的 `db` / `security` 类当前以空数组占位，待插件入索引后补充，绝不编造 id。
