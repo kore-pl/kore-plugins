@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 — 2026-11-23
+
+- `monitor` 0.2.0 → 0.2.1 入索引：`lifecycle` 由 `resident` 改为 `lazy`，修复 `MaxSlots=3` 下 3 个 resident 占满槽位、11 个 lazy 插件唤醒全部 429 的 P1 事故；`sha256` / `size_bytes` / `download_url` 同步，`versions.lock.json` 追加 0.2.1（sha `fb153e56482c…16b5`）。
+- 预设 `web-pro` / `full` 的 monitor 固定版本同步到 0.2.1；`market/plugins.js` 重建。
+- 第二十二次重签：新 ed25519 密钥对，公钥同步 `kore/internal/core/market/verify.go` 与 `scripts/validate-index.sh`；正例 exit 0（24 条）、反例 exit 1、24 条 release 资产 sha 全等 `BAD_COUNT=0`。
+
 ## 0.2.0 — 2026-11-23
 
 - 23 个插件版本 bump（4 个 minor、19 个 patch；`discover` 无产物变化不 bump），索引同步 `version` / `sha256` / `size_bytes` / `download_url`。
