@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2 — 2026-11-23
+
+- `firewall` 0.2.2 → 0.2.3 入索引：非 root 时 `status` / 提权动作统一返回 `E_NEED_ROOT`（403）而不是误报 401 登录失效；`sha256` / `size_bytes` / `download_url` 同步，`versions.lock.json` 追加 0.2.3（sha `353d56264532…651b`）。
+- 预设 `security` / `full` / `gateway` 的 firewall 固定版本同步到 0.2.3；`market/plugins.js` 重建。
+- 第二十三次重签：新 ed25519 密钥对，公钥同步 `kore/internal/core/market/verify.go` 与 `scripts/validate-index.sh`；正例 exit 0（24 条 + 版本单调 + id@version 唯一）、反例 exit 1、24 条 release 资产 sha 全等 `BAD_COUNT=0`。
+
 ## 0.2.1 — 2026-11-23
 
 - `monitor` 0.2.0 → 0.2.1 入索引：`lifecycle` 由 `resident` 改为 `lazy`，修复 `MaxSlots=3` 下 3 个 resident 占满槽位、11 个 lazy 插件唤醒全部 429 的 P1 事故；`sha256` / `size_bytes` / `download_url` 同步，`versions.lock.json` 追加 0.2.1（sha `fb153e56482c…16b5`）。
