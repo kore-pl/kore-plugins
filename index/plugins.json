@@ -23,8 +23,8 @@
       "version": "0.1.0",
       "depth_level": "production",
       "lifecycle": "resident",
-      "size_bytes": 1461933,
-      "sha256": "8704bfa4aef850035623f52bde983ffc18e9e153621f18ab954f1b4fdd764a46",
+      "size_bytes": 1462188,
+      "sha256": "35b481c53c24ec80385e501e0f67e2e047f4efdd4b382408bec347d37a309fe0",
       "download_url": "https://github.com/pengtang1024/kore-plugin-site/releases/download/v0.1.0/site-0.1.0.tar.gz",
       "requires_kore": ">=0.1.0 <0.2.0",
       "depends_on": [],
@@ -90,8 +90,8 @@
       "version": "0.2.0",
       "depth_level": "production",
       "lifecycle": "lazy",
-      "size_bytes": 1351114,
-      "sha256": "52ed8f9b8d91ee3e0c21c54b273afc3d664cb189c415339d2aab60c9c1acfe38",
+      "size_bytes": 1351917,
+      "sha256": "550b892dca9586427a15ed8587c99418e13b3aaedc857b5a21ff9915074ef7a3",
       "download_url": "https://github.com/pengtang1024/kore-plugin-cron/releases/download/v0.2.0/cron-0.2.0.tar.gz",
       "requires_kore": ">=0.1.0 <0.2.0",
       "depends_on": [],
@@ -221,8 +221,8 @@
       "version": "0.1.0",
       "depth_level": "production",
       "lifecycle": "lazy",
-      "size_bytes": 1370624,
-      "sha256": "2f7f35bc759277af1574d5207a0fbd8c03038d389a39a284fb23757c7ceb2c97",
+      "size_bytes": 1483468,
+      "sha256": "38224f72fbad979ab67e541ee7b2482d5e62beb82fa941302d207df2c14be993",
       "download_url": "https://github.com/pengtang1024/kore-plugin-db-mysql/releases/download/v0.1.0/db-mysql-0.1.0.tar.gz",
       "requires_kore": ">=0.1.0 <0.2.0",
       "depends_on": [],
@@ -349,6 +349,26 @@
       "scenario_tags": [
         "app",
         "web"
+      ]
+    },
+    {
+      "id": "terminal",
+      "name": "Web 终端插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "resident",
+      "size_bytes": 1357728,
+      "sha256": "38efffbb1b1ec50966c923855bec62c2eaaaebf02e1181a2e6a3dde7011a3474",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-terminal/releases/download/v0.1.0/terminal-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "ops"
+      ],
+      "capabilities": [
+        "system:admin",
+        "proc:write"
       ]
     }
   ]
