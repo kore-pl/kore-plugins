@@ -162,6 +162,10 @@
       {
         "version": "0.1.1",
         "sha256": "49415fff5d2e4f83ce5ddbb0ade0e3f946a33094226c4dd71908a5825ced1ef6"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "d315f699a946d8515621a0e2f2e3f8c1f8d20d97ab9e0d52dfcb2d69f7caf74b"
       }
     ],
     "redis": [

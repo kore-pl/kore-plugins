@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.3 — 2026-11-23
+
+- `db-postgres` 0.1.1 → 0.2.0 入索引：5 方法真连接 + SQL 白名单（连接 / 库列表 / 只读查询 / 状态，去 noop）；`sha256` / `size_bytes` / `download_url` 同步，`versions.lock.json` 追加 0.2.0（sha `d315f699a946…af74b`）。
+- 预设 `db-only` / `full` 的 db-postgres 固定版本同步到 0.2.0；`market/plugins.js` 重建。
+- 第二十四次重签：新 ed25519 密钥对，公钥同步 `kore/internal/core/market/verify.go` 与 `scripts/validate-index.sh`；正例 exit 0（24 条 + 版本单调 + id@version 唯一）、反例 exit 1、24 条 release 资产 sha 全等 `BAD_COUNT=0`。
+
 ## 0.2.2 — 2026-11-23
 
 - `firewall` 0.2.2 → 0.2.3 入索引：非 root 时 `status` / 提权动作统一返回 `E_NEED_ROOT`（403）而不是误报 401 登录失效；`sha256` / `size_bytes` / `download_url` 同步，`versions.lock.json` 追加 0.2.3（sha `353d56264532…651b`）。
