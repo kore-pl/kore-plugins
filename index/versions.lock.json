@@ -240,6 +240,10 @@
       {
         "version": "0.1.0",
         "sha256": "17deef1393cebcb0908323f0e7f34716f5dc4dd5b30dce92367665280ef84bb6"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "5055b67dfe29f782f4735b3ebc4ff23164a450de52c1fc051bedf572a8f43387"
       }
     ]
   }
