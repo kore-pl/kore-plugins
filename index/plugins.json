@@ -7,7 +7,7 @@
       "version": "0.1.1",
       "depth_level": "basic",
       "lifecycle": "resident",
-      "size_bytes": 1258133,
+      "size_bytes": 1250647,
       "sha256": "98707f4cd929cf0b67f2b6dea8b978300793e899bb15fd8aca148b2f27fd6d04",
       "download_url": "https://github.com/pengtang1024/kore-plugin-echo/releases/download/v0.1.1/echo-0.1.1.tar.gz",
       "requires_kore": ">=0.1.0 <0.2.0",
@@ -23,7 +23,7 @@
       "version": "0.1.0",
       "depth_level": "production",
       "lifecycle": "resident",
-      "size_bytes": 1363615,
+      "size_bytes": 1384562,
       "sha256": "ff9c2c1698e2e63ecfa7e384f539483224297efff68d85dd9a6c73a0f539d484",
       "download_url": "https://github.com/pengtang1024/kore-plugin-site/releases/download/v0.1.0/site-0.1.0.tar.gz",
       "requires_kore": ">=0.1.0 <0.2.0",
@@ -164,6 +164,125 @@
       "scenario_tags": [
         "ops",
         "web"
+      ]
+    },
+    {
+      "id": "runtime-php",
+      "name": "PHP 运行时插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1263718,
+      "sha256": "ea35e95f7c44c42c66e73ea9d1bc36281f185aeae301f1df1bc1667384e13b97",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-runtime-php/releases/download/v0.1.0/runtime-php-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "web",
+        "app"
+      ]
+    },
+    {
+      "id": "runtime-node",
+      "name": "Node 运行时插件",
+      "version": "0.1.0",
+      "depth_level": "basic",
+      "lifecycle": "lazy",
+      "size_bytes": 1268435,
+      "sha256": "aef10c9eea2289e54d0aac119e8d9f2c545a11e948b6b2a60989a622d96af7a8",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-runtime-node/releases/download/v0.1.0/runtime-node-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "app"
+      ]
+    },
+    {
+      "id": "runtime-python",
+      "name": "Python 运行时插件",
+      "version": "0.1.0",
+      "depth_level": "basic",
+      "lifecycle": "lazy",
+      "size_bytes": 1267590,
+      "sha256": "eb1ac40839ccd3e0ea7b8fd09ba56be4f3798c5ad3346240c745d7444d3a5846",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-runtime-python/releases/download/v0.1.0/runtime-python-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "app"
+      ]
+    },
+    {
+      "id": "db-mysql",
+      "name": "MySQL/MariaDB 管理插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1370624,
+      "sha256": "2f7f35bc759277af1574d5207a0fbd8c03038d389a39a284fb23757c7ceb2c97",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-db-mysql/releases/download/v0.1.0/db-mysql-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [
+        "db-postgres"
+      ],
+      "scenario_tags": [
+        "data"
+      ]
+    },
+    {
+      "id": "db-postgres",
+      "name": "PostgreSQL 管理插件",
+      "version": "0.1.0",
+      "depth_level": "basic",
+      "lifecycle": "lazy",
+      "size_bytes": 1264637,
+      "sha256": "a0f5b55894768ffe75f3cdbe6e4457ef15f0d0b7b2422017da70cbccbf44a655",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-db-postgres/releases/download/v0.1.0/db-postgres-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [
+        "db-mysql"
+      ],
+      "scenario_tags": [
+        "data"
+      ]
+    },
+    {
+      "id": "redis",
+      "name": "Redis 管理插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1264116,
+      "sha256": "81b304e824e9c133feb2857c407d1dfab3c7c2ae8d3cf581b985178af544a9fe",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-redis/releases/download/v0.1.0/redis-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "data",
+        "ops"
+      ]
+    },
+    {
+      "id": "backup",
+      "name": "备份插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1268360,
+      "sha256": "9042bf54d18a0f8e26babdef008d492bc2e0f2d09e27c3a8e7f3c8825d333177",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-backup/releases/download/v0.1.0/backup-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "ops",
+        "data"
       ]
     }
   ]
