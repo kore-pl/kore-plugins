@@ -6,9 +6,9 @@
   "out_of_box": true,
   "plugins": [
     { "id": "site", "version": "0.1.0", "desired": "enabled" },
-    { "id": "ssl", "version": "0.1.0", "desired": "enabled" },
+    { "id": "ssl", "version": "0.2.0", "desired": "enabled" },
     { "id": "monitor", "version": "0.1.0", "desired": "enabled" },
-    { "id": "logs", "version": "0.1.0", "desired": "enabled" },
+    { "id": "logs", "version": "0.2.0", "desired": "enabled" },
     { "id": "runtime-php", "version": "0.1.0", "desired": "enabled" },
     { "id": "db-mysql", "version": "0.1.0", "desired": "enabled" }
   ]

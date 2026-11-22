@@ -7,8 +7,8 @@
   "plugins": [
     { "id": "ssh-guard", "version": "0.1.0", "desired": "enabled" },
     { "id": "integrity", "version": "0.1.0", "desired": "enabled" },
-    { "id": "ssl", "version": "0.1.0", "desired": "enabled" },
-    { "id": "firewall", "version": "0.1.0", "desired": "enabled" },
+    { "id": "ssl", "version": "0.2.0", "desired": "enabled" },
+    { "id": "firewall", "version": "0.2.0", "desired": "enabled" },
     { "id": "waf", "version": "0.1.0", "desired": "enabled" }
   ]
 }

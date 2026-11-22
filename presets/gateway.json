@@ -6,8 +6,8 @@
   "out_of_box": false,
   "plugins": [
     { "id": "site", "version": "0.1.0", "desired": "enabled" },
-    { "id": "ssl", "version": "0.1.0", "desired": "enabled" },
+    { "id": "ssl", "version": "0.2.0", "desired": "enabled" },
     { "id": "dns", "version": "0.1.0", "desired": "enabled" },
-    { "id": "firewall", "version": "0.1.0", "desired": "enabled" }
+    { "id": "firewall", "version": "0.2.0", "desired": "enabled" }
   ]
 }

@@ -7,8 +7,8 @@
   "plugins": [
     { "id": "db-mysql", "version": "0.1.0", "desired": "enabled" },
     { "id": "db-postgres", "version": "0.1.0", "desired": "disabled" },
-    { "id": "file", "version": "0.1.0", "desired": "enabled" },
-    { "id": "backup", "version": "0.1.0", "desired": "enabled" },
-    { "id": "redis", "version": "0.1.0", "desired": "enabled" }
+    { "id": "file", "version": "0.2.0", "desired": "enabled" },
+    { "id": "backup", "version": "0.2.0", "desired": "enabled" },
+    { "id": "redis", "version": "0.2.0", "desired": "enabled" }
   ]
 }
