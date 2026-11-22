@@ -136,12 +136,12 @@
     {
       "id": "logs",
       "name": "日志查看分析插件",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "depth_level": "production",
       "lifecycle": "lazy",
-      "size_bytes": 1253689,
-      "sha256": "8ff57a55e7028f2e6bd565af48b4c427f492a800b53afa69e75838530bf3cd47",
-      "download_url": "https://github.com/pengtang1024/kore-plugin-logs/releases/download/v0.1.0/logs-0.1.0.tar.gz",
+      "size_bytes": 1473947,
+      "sha256": "ce77bf18eb45ad01448b97fa3006a5bd71e15d04774359188995727b01dfe151",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-logs/releases/download/v0.2.0/logs-0.2.0.tar.gz",
       "requires_kore": ">=0.1.0 <0.2.0",
       "depends_on": [],
       "conflicts": [],
@@ -368,6 +368,26 @@
       ],
       "capabilities": [
         "system:admin",
+        "proc:write"
+      ]
+    },
+    {
+      "id": "process",
+      "name": "进程管理插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1321761,
+      "sha256": "bb793eb9c3f9768fe47361ce1e803a18c6a5dac5c88862809477e54ccda24d5c",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-process/releases/download/v0.1.0/process-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "ops"
+      ],
+      "capabilities": [
+        "proc:read",
         "proc:write"
       ]
     }
