@@ -284,6 +284,72 @@
         "ops",
         "data"
       ]
+    },
+    {
+      "id": "firewall",
+      "name": "防火墙/端口管理插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1263619,
+      "sha256": "46ad00fff294a5b9b63471cfe4b77c9044b36bc1ca7130856f2debbd45f57699",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-firewall/releases/download/v0.1.0/firewall-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "sec",
+        "ops"
+      ]
+    },
+    {
+      "id": "waf",
+      "name": "WAF 插件",
+      "version": "0.1.0",
+      "depth_level": "basic",
+      "lifecycle": "lazy",
+      "size_bytes": 1367773,
+      "sha256": "ab0a9b071c01ffa609b2136ad4a55d05859209445220f344fd2d319c965eca08",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-waf/releases/download/v0.1.0/waf-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "sec"
+      ]
+    },
+    {
+      "id": "container",
+      "name": "容器管理插件",
+      "version": "0.1.0",
+      "depth_level": "basic",
+      "lifecycle": "lazy",
+      "size_bytes": 1264034,
+      "sha256": "277596f918228619fd1402f77921e9da3c4a723f8f95d085a7a00f9481e88a24",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-container/releases/download/v0.1.0/container-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "ops"
+      ]
+    },
+    {
+      "id": "app-deploy",
+      "name": "应用一键部署插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1268912,
+      "sha256": "594d3dce8c2d881dfbbfeaa92f2952e52342ddbc459594d84dea1cdd5998cc92",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-app-deploy/releases/download/v0.1.0/app-deploy-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "app",
+        "web"
+      ]
     }
   ]
 }
