@@ -2,9 +2,11 @@
   "schema_version": 1,
   "id": "gateway",
   "name": "网关",
-  "description": "启用 site 的反向代理能力承担网关角色，不引入任何额外常驻中间件。",
-  "out_of_box": true,
+  "description": "启用 site 承担反向代理/网关、ssl 提供证书、dns 管理区域与记录；site 为唯一常驻插件。",
+  "out_of_box": false,
   "plugins": [
-    { "id": "site", "version": "0.1.0", "desired": "enabled" }
+    { "id": "site", "version": "0.1.0", "desired": "enabled" },
+    { "id": "ssl", "version": "0.1.0", "desired": "enabled" },
+    { "id": "dns", "version": "0.1.0", "desired": "enabled" }
   ]
 }

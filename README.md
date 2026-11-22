@@ -31,7 +31,7 @@ kore 的**纯静态插件索引仓**：只发布 `index/plugins.json` 与校验�
 | `dev` | 仅启用 echo，供协议联调与本地开发冒烟（含 basic，非开箱可用）。 |
 | `web-lite` | 仅启用 site，提供最小站点与域名管理能力。 |
 | `web-pro` | site 承载站点/反代，echo 默认关闭按需排障（含 basic）。 |
-| `db-only` | 预留纯数据库场景；db 插件未入索引，当前空置。 |
+| `db-only` | 预留纯数据库场景；当前索引无 db 插件（db-mysql 在批2），保留占位，待批2 db 插件入索引后补充，不编造 id。 |
 | `gateway` | 启用 site 的反向代理能力承担网关角色，不引入额外常驻中间件。 |
 | `security` | 预留安全加固场景；security 插件未入索引，当前空置。 |
 | `full` | 启用全部已入索引插件（echo + site）用于完整回归（含 basic）。 |

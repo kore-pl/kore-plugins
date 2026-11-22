@@ -2,10 +2,12 @@
   "schema_version": 1,
   "id": "web-pro",
   "name": "专业 Web",
-  "description": "启用 site 承载站点与反向代理，echo 诊断插件默认关闭、按需开启排障；含 basic 级 echo，非开箱可用。",
-  "out_of_box": false,
+  "description": "启用 site 承载站点与反向代理、ssl 管理证书、monitor 提供系统监控、logs 提供日志分析；site 与 monitor 为常驻插件。",
+  "out_of_box": true,
   "plugins": [
     { "id": "site", "version": "0.1.0", "desired": "enabled" },
-    { "id": "echo", "version": "0.1.1", "desired": "disabled" }
+    { "id": "ssl", "version": "0.1.0", "desired": "enabled" },
+    { "id": "monitor", "version": "0.1.0", "desired": "enabled" },
+    { "id": "logs", "version": "0.1.0", "desired": "enabled" }
   ]
 }

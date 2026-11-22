@@ -2,7 +2,11 @@
   "schema_version": 1,
   "id": "security",
   "name": "安全加固",
-  "description": "预留安全加固场景；security 类插件尚未进入索引，当前不启用任何插件，待插件入索引后补充。",
-  "out_of_box": true,
-  "plugins": []
+  "description": "启用 ssh-guard 做 SSH 加固、integrity 做关键文件完整性巡检、ssl 管理证书，三者均为 lazy 插件、零常驻；含 basic 级 ssh-guard/integrity，非开箱可用。",
+  "out_of_box": false,
+  "plugins": [
+    { "id": "ssh-guard", "version": "0.1.0", "desired": "enabled" },
+    { "id": "integrity", "version": "0.1.0", "desired": "enabled" },
+    { "id": "ssl", "version": "0.1.0", "desired": "enabled" }
+  ]
 }

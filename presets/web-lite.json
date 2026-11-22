@@ -2,9 +2,10 @@
   "schema_version": 1,
   "id": "web-lite",
   "name": "轻量 Web",
-  "description": "仅启用 site 提供站点与域名管理的最小 Web 能力，单常驻插件。",
+  "description": "启用 site 提供站点与域名管理、ssl 提供证书与自动续期，构成最小 Web 能力；site 为唯一常驻插件。",
   "out_of_box": true,
   "plugins": [
-    { "id": "site", "version": "0.1.0", "desired": "enabled" }
+    { "id": "site", "version": "0.1.0", "desired": "enabled" },
+    { "id": "ssl", "version": "0.1.0", "desired": "enabled" }
   ]
 }

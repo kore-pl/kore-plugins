@@ -2,10 +2,18 @@
   "schema_version": 1,
   "id": "full",
   "name": "全量",
-  "description": "启用全部已入索引插件（echo + site）用于完整功能回归；含 basic 级 echo，非开箱可用。",
+  "description": "启用索引中全部 10 个插件：site/echo/monitor 三个 resident 默认启用（常驻 3/3），其余 7 个 lazy 插件引用但默认 disabled、按需启用；含 basic 级插件，非开箱可用。",
   "out_of_box": false,
   "plugins": [
+    { "id": "site", "version": "0.1.0", "desired": "enabled" },
     { "id": "echo", "version": "0.1.1", "desired": "enabled" },
-    { "id": "site", "version": "0.1.0", "desired": "enabled" }
+    { "id": "monitor", "version": "0.1.0", "desired": "enabled" },
+    { "id": "ssl", "version": "0.1.0", "desired": "disabled" },
+    { "id": "file", "version": "0.1.0", "desired": "disabled" },
+    { "id": "integrity", "version": "0.1.0", "desired": "disabled" },
+    { "id": "cron", "version": "0.1.0", "desired": "disabled" },
+    { "id": "ssh-guard", "version": "0.1.0", "desired": "disabled" },
+    { "id": "logs", "version": "0.1.0", "desired": "disabled" },
+    { "id": "dns", "version": "0.1.0", "desired": "disabled" }
   ]
 }
