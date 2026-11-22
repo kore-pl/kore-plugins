@@ -7,7 +7,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 INDEX="$ROOT/index/plugins.json"
 SIG="$ROOT/index/plugins.json.sig"
 # 内置演示公钥（hex，32 字节）。生产应由内核二进制内置同一把公钥。
-PUB_HEX="1a97a0003840bd25b03bf7cde7e2ecf8f53245388d868e3c8caae22acd68fe9e"
+PUB_HEX="adb9998e4281118f297ecef2505b81e3b58637ce4e78c4ed1698fa5b61b442a4"
 PUB_DER="$ROOT/.validate-pub.der"
 trap 'rm -f "$PUB_DER"' EXIT
 

@@ -24,7 +24,7 @@
       "depth_level": "production",
       "lifecycle": "resident",
       "size_bytes": 1363615,
-      "sha256": "6347b2e6f117c0eb8dbdbee965345a63bc3ce85c2400abcaeaeda70f9dccb67f",
+      "sha256": "ff9c2c1698e2e63ecfa7e384f539483224297efff68d85dd9a6c73a0f539d484",
       "download_url": "https://github.com/pengtang1024/kore-plugin-site/releases/download/v0.1.0/site-0.1.0.tar.gz",
       "requires_kore": ">=0.1.0 <0.2.0",
       "depends_on": [],
