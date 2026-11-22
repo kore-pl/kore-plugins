@@ -2,7 +2,7 @@
 
 kore 的**纯静态插件索引仓**：只发布 `index/plugins.json` 与校验脚本，不审核、不代管包、无账号、无服务端。
 
-> 状态: M2 · 归属: M2-B · 更新: 2026-11-22
+> 状态: M2 · 归属: M2-B / M5-B · 更新: 2026-11-22
 
 ## 发现渠道，不是信任源
 
@@ -13,6 +13,20 @@ kore 的**纯静态插件索引仓**：只发布 `index/plugins.json` 与校验�
 - **无审核**：任何人可提 PR 增改条目，合并即发布；使用者自行决定是否安装。
 - **无账号**：不收集身份、不要求登录、不隐藏上报（G-10）。
 - **离线可用**：`kore` 读本地索引缓存（`paths.index_dir`，默认 `/var/lib/kore/index`），零后台出站；商店只做索引读取 / 验签 / 安装触发，下载留 M2-B 第二批，`POST /store/install` 目前接收本地 tar.gz 路径。
+
+## 静态市场页（`market/`）
+
+`market/index.html` 是一个**断网可开、零框架、纯静态**的插件市场页（M5-B）：双击文件即可在 `file://` 下打开，不发起任何网络请求、不依赖服务端。
+
+- **数据来源**：`market/plugins.js` 由 `bash scripts/build-market.sh` 从 `index/plugins.json` 构建期内嵌生成（`window.KORE_PLUGINS = [...]`）。页面引用本地脚本，**不用 fetch**——`file://` 下 fetch 会被浏览器拦截，内嵌数据天然规避该问题。索引变更后重跑构建即可刷新页面。
+- **只内嵌显示字段**：`id / name / version / depth_level / description / scenario_tags` 六项；`download_url` 等外链不进生成物，页面无 CDN、无 http(s) 外链。
+- **摘要来源**：索引 schema 无 `description` 字段，构建脚本在缺失时以「名称（场景：tags）」生成中性摘要，不编造插件能力；若后续条目自带 `description` 则优先采用。
+- **页面功能**：原生 JS 搜索框（按 id / 名称 / 场景标签过滤），`production` / `basic` 深度等级标识，页面内断网与无账号无审核提示。
+- **首屏预算**：独立页面，不进 kore 首屏预算；零框架、零 npm/node 运行时依赖，生成脚本仅用 python3 标准库。
+
+```bash
+bash scripts/build-market.sh   # 生成 market/plugins.js（断网可开，构建期数据内嵌）
+```
 
 ## 索引格式
 
