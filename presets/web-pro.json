@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "web-pro",
+  "name": "专业 Web",
+  "description": "启用 site 承载站点与反向代理，echo 诊断插件默认关闭、按需开启排障；含 basic 级 echo，非开箱可用。",
+  "out_of_box": false,
+  "plugins": [
+    { "id": "site", "version": "0.1.0", "desired": "enabled" },
+    { "id": "echo", "version": "0.1.1", "desired": "disabled" }
+  ]
+}

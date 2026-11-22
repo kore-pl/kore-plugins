@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "id": "minimal",
+  "name": "最小化",
+  "description": "不启用任何插件，仅主壳运行；作为资源基线与故障隔离的干净起点。",
+  "out_of_box": true,
+  "plugins": []
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gateway",
+  "name": "网关",
+  "description": "启用 site 的反向代理能力承担网关角色，不引入任何额外常驻中间件。",
+  "out_of_box": true,
+  "plugins": [
+    { "id": "site", "version": "0.1.0", "desired": "enabled" }
+  ]
+}

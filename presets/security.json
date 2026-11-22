@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "id": "security",
+  "name": "安全加固",
+  "description": "预留安全加固场景；security 类插件尚未进入索引，当前不启用任何插件，待插件入索引后补充。",
+  "out_of_box": true,
+  "plugins": []
+}

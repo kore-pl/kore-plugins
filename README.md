@@ -21,14 +21,33 @@ kore 的**纯静态插件索引仓**：只发布 `index/plugins.json` 与校验�
 
 首两条：`echo 0.1.1`（basic，sha256 `eaa34f…4219c`）、`site 0.1.0`（production，sha256 `59b107…520f`），摘要均为对应 `dist/*.tar.gz` 的实测值。
 
+## 场景预设（`presets/`）
+
+8 类预设均为 `schema_version=1` 的 JSON，含 `id / name / description / out_of_box / plugins[]`，每项插件引用 `{id, version, desired}`（`desired` ∈ `enabled|disabled`）。**只引用索引中真实存在的插件 id**——当前仅 `echo 0.1.1`（basic）、`site 0.1.0`（production）；未入索引的 `db` / `security` 类当前以空数组占位，待插件入索引后补充，绝不编造 id。
+
+| 预设 | 用途 |
+| --- | --- |
+| `minimal` | 不启用任何插件，作为资源基线与故障隔离的干净起点。 |
+| `dev` | 仅启用 echo，供协议联调与本地开发冒烟（含 basic，非开箱可用）。 |
+| `web-lite` | 仅启用 site，提供最小站点与域名管理能力。 |
+| `web-pro` | site 承载站点/反代，echo 默认关闭按需排障（含 basic）。 |
+| `db-only` | 预留纯数据库场景；db 插件未入索引，当前空置。 |
+| `gateway` | 启用 site 的反向代理能力承担网关角色，不引入额外常驻中间件。 |
+| `security` | 预留安全加固场景；security 插件未入索引，当前空置。 |
+| `full` | 启用全部已入索引插件（echo + site）用于完整回归（含 basic）。 |
+
+`out_of_box` 标记"开箱可用"：按 G-20，`depth_level=basic` 的插件（echo）所在预设必须为 `false`，校验脚本对此 FAIL 级拦截。
+
 ## 校验
 
 ```bash
-bash scripts/validate-index.sh     # schema / id 唯一 / sha256 格式 / 验签 / 预设引用
-make check                          # 等价入口
+bash scripts/validate-index.sh     # 索引：schema / id 唯一 / sha256 格式 / 验签 / 预设引用
+bash scripts/validate-presets.sh   # 预设：id 引用 / 常驻≤3 / 合计 RSS / sha256 / basic 不开箱
+make presets-check                  # 等价入口（G-18）
+make check                          # 聚合：索引校验 + 预设校验
 ```
 
-反向验证：把 `plugins.json` 里任一 `sha256` 改一个字符，脚本必须以 `[FAIL]` 退出（非 0）。
+预设合计 RSS：48 MiB 为硬红线（超则 FAIL），24 MiB 与 19.2 MiB 仅记 WARN 不判失败（G-03 / G-18，裁决按 resident 实测中位数求和；本仓用索引 `size_bytes` 作体积代理，可用 `KORE_PRESETS_MEASURED_JSON` 注入实测值覆盖）。反向验证：临时副本注入未知插件 id 或第 4 个常驻插件，脚本必须以 `[FAIL]` 退出（非 0）；把 `plugins.json` 里任一 `sha256` 改一个字符，`make check` 必须以 `[FAIL]` 退出。
 
 ## 签名链与轮换（引用提案 0002 §2 M2-B / R2）
 

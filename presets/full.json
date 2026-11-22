@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "full",
+  "name": "全量",
+  "description": "启用全部已入索引插件（echo + site）用于完整功能回归；含 basic 级 echo，非开箱可用。",
+  "out_of_box": false,
+  "plugins": [
+    { "id": "echo", "version": "0.1.1", "desired": "enabled" },
+    { "id": "site", "version": "0.1.0", "desired": "enabled" }
+  ]
+}
