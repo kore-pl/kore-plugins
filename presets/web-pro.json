@@ -2,12 +2,14 @@
   "schema_version": 1,
   "id": "web-pro",
   "name": "专业 Web",
-  "description": "启用 site 承载站点与反向代理、ssl 管理证书、monitor 提供系统监控、logs 提供日志分析；site 与 monitor 为常驻插件。",
+  "description": "标准 PHP+MySQL 生产栈：site 站点与反向代理、monitor 系统监控为常驻；ssl 证书、logs 日志分析、runtime-php PHP 运行时、db-mysql 数据库管理按需启用；全部生产级，开箱可用。",
   "out_of_box": true,
   "plugins": [
     { "id": "site", "version": "0.1.0", "desired": "enabled" },
     { "id": "ssl", "version": "0.1.0", "desired": "enabled" },
     { "id": "monitor", "version": "0.1.0", "desired": "enabled" },
-    { "id": "logs", "version": "0.1.0", "desired": "enabled" }
+    { "id": "logs", "version": "0.1.0", "desired": "enabled" },
+    { "id": "runtime-php", "version": "0.1.0", "desired": "enabled" },
+    { "id": "db-mysql", "version": "0.1.0", "desired": "enabled" }
   ]
 }
