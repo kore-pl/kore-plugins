@@ -80,6 +80,10 @@
       {
         "version": "0.1.1",
         "sha256": "1adacbceff65123564194a1ec99172c3ad40d97d6dedc1d9f491f2cb658e82b5"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "6cc7cac094287ae0147cce24fcf44d42f51db8ff0871ac2e622c0ba43677bf80"
       }
     ],
     "logs": [
@@ -140,6 +144,10 @@
       {
         "version": "0.2.0",
         "sha256": "c1ba9c79c81aa531850fee3d73c5fe32d9948540cf9ef559d956cbc20031a3d0"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "d89c057c14b9865ee69bd46894bffa32fb73fe3158379c47c0e5feabc474acd8"
       }
     ],
     "db-postgres": [
