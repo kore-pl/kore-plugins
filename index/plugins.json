@@ -33,6 +33,138 @@
         "web",
         "ops"
       ]
+    },
+    {
+      "id": "file",
+      "name": "文件管理插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1268965,
+      "sha256": "45078bdfcca8695288b66315c8b7e9ccc592eb8473b6e6b331e02a71036c7ffc",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-file/releases/download/v0.1.0/file-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "ops",
+        "data"
+      ]
+    },
+    {
+      "id": "ssl",
+      "name": "SSL 证书与自动续期插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1361776,
+      "sha256": "891adc5affcad5efda41b68f5ee8f21d59867e32c10b4de10a74e80e53ea8453",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-ssl/releases/download/v0.1.0/ssl-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "web",
+        "sec"
+      ]
+    },
+    {
+      "id": "integrity",
+      "name": "关键文件完整性插件",
+      "version": "0.1.0",
+      "depth_level": "basic",
+      "lifecycle": "lazy",
+      "size_bytes": 1256659,
+      "sha256": "5aa02fc01d242dcad73e655dd11f7272c4ef96227073b9aeceadc7a85578400d",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-integrity/releases/download/v0.1.0/integrity-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "sec"
+      ]
+    },
+    {
+      "id": "cron",
+      "name": "计划任务插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1260828,
+      "sha256": "ef0344b3f418722c6eac5871efeef822ace5154b165765111fc04b74e2ba2634",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-cron/releases/download/v0.1.0/cron-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "ops"
+      ]
+    },
+    {
+      "id": "ssh-guard",
+      "name": "SSH 加固插件",
+      "version": "0.1.0",
+      "depth_level": "basic",
+      "lifecycle": "lazy",
+      "size_bytes": 1253218,
+      "sha256": "bdb91b2d4415cac435fe7422321accdc2b70cca7645fd12802252617a85dc0f7",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-ssh-guard/releases/download/v0.1.0/ssh-guard-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "sec"
+      ]
+    },
+    {
+      "id": "monitor",
+      "name": "系统监控插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "resident",
+      "size_bytes": 1254187,
+      "sha256": "19909d5e1c914f953a48c1bc1b93d8dbc1a40e39ee2c24435185cbd62757024c",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-monitor/releases/download/v0.1.0/monitor-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "ops",
+        "sec"
+      ]
+    },
+    {
+      "id": "logs",
+      "name": "日志查看分析插件",
+      "version": "0.1.0",
+      "depth_level": "production",
+      "lifecycle": "lazy",
+      "size_bytes": 1253689,
+      "sha256": "8ff57a55e7028f2e6bd565af48b4c427f492a800b53afa69e75838530bf3cd47",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-logs/releases/download/v0.1.0/logs-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "ops"
+      ]
+    },
+    {
+      "id": "dns",
+      "name": "DNS 区域 / 记录管理插件",
+      "version": "0.1.0",
+      "depth_level": "basic",
+      "lifecycle": "lazy",
+      "size_bytes": 1382482,
+      "sha256": "f56fb7c3d62acf3fcf344076f3e2efd03601ca201c593c0a1d0bc9ffe02fc0bd",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-dns/releases/download/v0.1.0/dns-0.1.0.tar.gz",
+      "requires_kore": ">=0.1.0 <0.2.0",
+      "depends_on": [],
+      "conflicts": [],
+      "scenario_tags": [
+        "ops",
+        "web"
+      ]
     }
   ]
 }
