@@ -138,6 +138,10 @@
       {
         "version": "0.4.0",
         "sha256": "4358320e002acc742d4fa71b9660b438c3810b64b1c3dbf376bf4343794c2e19"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "474f414cc5e1b2fb4f52d098960d9321800557371591c9f913418dea8bb4baa3"
       }
     ],
     "cron": [
@@ -164,6 +168,10 @@
       {
         "version": "0.5.0",
         "sha256": "25a7f55886cf2b68de2680d7cc3fcc4500c7e16e0ebecad681f26529c90b2bc0"
+      },
+      {
+        "version": "0.6.0",
+        "sha256": "3bf24afcb4c2abc44a7341952cf1fa8a0ab87ef8bb4d2822316f938e6c2d7eae"
       }
     ],
     "ssh-guard": [
