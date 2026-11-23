@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
-# 校验静态索引仓：schema / id 唯一 / sha256 格式 / ed25519 签名 / 预设引用。
+# 校验静态索引仓：schema / 必填字段 / id 唯一 / sha256 格式 / 版本账本 / 预设引用 / ed25519 签名。
 # 零第三方依赖：Python3 标准库 + openssl（系统自带）。私钥不参与校验。
+#
+# 签名校验开关（全脚本唯一一个，不要扩）：
+#   KORE_INDEX_SKIP_SIG=1  仅跳过第 2 步 ed25519 验签；schema / 必填字段 / 版本账本 / 预设引用
+#                          照常全量校验。只允许用于「PR 的 schema 校验」：贡献者没有私钥，
+#                          无法为内容改动重签，PR CI 必须能只验内容。
+#   不设 / =0（默认）       全量验签，fail-closed。行为与历史版本完全一致。
+# 禁止场景（用错等于给自己开验签空窗）：
+#   × push main / tag 的 CI —— 那是发布侧，未签 / 错签必须红；
+#   × 合并前本地验收、发布前复核 —— 判定「索引可发布」的场合必须全量验签；
+#   × 把跳过模式的退出码当成「索引校验通过」写进报告 / PR 证据。
+# 跳过模式下仍要求 index/plugins.json.sig 存在（缺文件是仓库损坏，不放过）。
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -13,6 +24,19 @@ trap 'rm -f "$PUB_DER"' EXIT
 
 fail() { echo "[FAIL] $*" >&2; exit 1; }
 ok() { echo "[OK] $*"; }
+
+# 启动即声明当前签名校验模式：默认全量验签（fail-closed），只有显式 KORE_INDEX_SKIP_SIG=1 才跳过。
+SKIP_SIG=0
+case "${KORE_INDEX_SKIP_SIG:-}" in
+  ""|0) echo "[INFO] 签名校验：开启（ed25519 全量验签）" ;;
+  1)
+    SKIP_SIG=1
+    echo "[WARN] 签名校验：已跳过（KORE_INDEX_SKIP_SIG=1，仅限 PR schema 校验）"
+    ;;
+  *)
+    fail "KORE_INDEX_SKIP_SIG 只接受 1（跳过验签）或不设 / 0（默认全量验签），当前值: ${KORE_INDEX_SKIP_SIG}"
+    ;;
+esac
 
 [ -f "$INDEX" ] || fail "缺少 $INDEX"
 [ -f "$SIG" ] || fail "缺少 $SIG"
@@ -119,7 +143,11 @@ print(f"[OK] 预设引用可解析（占位/已校验 {checked} 条引用）")
 PY
 
 # 2) ed25519 验签：用内置公钥 hex 重建 DER 公钥，验 .sig 对索引本体有效。
-python3 - "$PUB_HEX" "$PUB_DER" <<'PY'
+#    KORE_INDEX_SKIP_SIG=1 时整步跳过（只限 PR schema 校验；见文件头禁止场景）。
+if [ "$SKIP_SIG" = 1 ]; then
+  echo "[SKIP] 跳过 ed25519 验签（schema / 账本 / 预设已校验；签名须由发布方在合并时重签）"
+else
+  python3 - "$PUB_HEX" "$PUB_DER" <<'PY'
 import sys
 h, out = sys.argv[1], sys.argv[2]
 h = h.strip().lower()
@@ -129,11 +157,12 @@ if len(h) != 64 or any(c not in "0123456789abcdef" for c in h):
 der = bytes.fromhex("302a300506032b6570032100" + h)
 open(out, "wb").write(der)
 PY
-if openssl pkeyutl -verify -pubin -inkey "$PUB_DER" -rawin \
-    -in "$INDEX" -sigfile "$SIG" >/dev/null 2>&1; then
-  ok "ed25519 签名验证通过（内置公钥）"
-else
-  fail "ed25519 签名验证失败（索引被篡改或签名不匹配）"
+  if openssl pkeyutl -verify -pubin -inkey "$PUB_DER" -rawin \
+      -in "$INDEX" -sigfile "$SIG" >/dev/null 2>&1; then
+    ok "ed25519 签名验证通过（内置公钥）"
+  else
+    fail "ed25519 签名验证失败（索引被篡改或签名不匹配）"
+  fi
 fi
 
 ok "索引校验全部通过"

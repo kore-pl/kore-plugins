@@ -57,11 +57,15 @@ bash scripts/build-market.sh   # 生成 market/plugins.js（断网可开，构�
 ## 校验
 
 ```bash
-bash scripts/validate-index.sh     # 索引：schema / id 唯一 / sha256 格式 / 验签 / 预设引用
+bash scripts/validate-index.sh     # 索引：schema / id 唯一 / sha256 格式 / 版本账本 / 验签 / 预设引用
+KORE_INDEX_SKIP_SIG=1 bash scripts/validate-index.sh   # 仅 PR CI：跳过 ed25519 验签，其余照常
 bash scripts/validate-presets.sh   # 预设：id 引用 / 常驻≤3 / 合计 RSS / sha256 / basic 不开箱
 make presets-check                  # 等价入口（G-18）
-make check                          # 聚合：索引校验 + 预设校验
+make check                          # 聚合：索引校验 + 预设校验（默认全量验签）
+KORE_INDEX_SKIP_SIG=1 make check    # 聚合但跳过验签（只给 PR schema 校验用）
 ```
+
+`KORE_INDEX_SKIP_SIG=1` 是**唯一**的签名开关，只跳过 ed25519 验签；schema / 字段 / 账本 / 预设引用照常全量校验，`index/plugins.json.sig` 缺失仍 FAIL。**默认行为不变、fail-closed**：不设或 `=0` 全量验签，非法取值直接 FAIL，启动会打印一行当前模式。
 
 预设合计 RSS：48 MiB 为硬红线（超则 FAIL），24 MiB 与 19.2 MiB 仅记 WARN 不判失败（G-03 / G-18，裁决按 resident 实测中位数求和；本仓用索引 `size_bytes` 作体积代理，可用 `KORE_PRESETS_MEASURED_JSON` 注入实测值覆盖）。反向验证：临时副本注入未知插件 id 或第 4 个常驻插件，脚本必须以 `[FAIL]` 退出（非 0）；把 `plugins.json` 里任一 `sha256` 改一个字符，`make check` 必须以 `[FAIL]` 退出。
 
@@ -69,24 +73,53 @@ make check                          # 聚合：索引校验 + 预设校验
 
 索引级 ed25519 签名**前移到 M2**（信任空窗 = 0）：签名对象 = `plugins.json` 文件本体，公钥内置 kore 二进制，未签名索引默认拒绝。
 
-- **内置公钥（hex）**：`e3a00492b030fe00ccef267390d384c58fa9f651c073c448b8d0a729d58a0e9a`（第 36 把）。三处必须逐字一致：本仓 `scripts/validate-index.sh` 的 `PUB_HEX`、kore 内核 `internal/core/market/verify.go` 的 `IndexPublicKeyHex`、以及当前 `index/plugins.json.sig` 的签发密钥。**公钥变更必须与 kore 内核同批发布**：旧 `kored` 二进制内置旧公钥，验新签名会全部 401（商店整体不可用），恢复只能重启内核重新载入公钥。私钥不入库，由发布方在 CI secret（`KORE_INDEX_KEY`）注入。
-- **签名**：CI 在 release 流水线注入 `KORE_INDEX_KEY`（私钥 seed hex，仅存 CI secret），执行 `bash scripts/sign-index.sh` 产出 `index/plugins.json.sig`（64 字节 raw 签名），随后发布 `index/`。
+### 角色：签名是发布方的动作，不是 CI 的动作
+
+- **签名 = 发布方（维护者）在权威源执行的发布动作**：`index/plugins.json.sig` 由维护者在发布机上执行 `KORE_INDEX_KEY=<seed> bash scripts/sign-index.sh` 生成，并与内容**同批提交**。私钥只存在于发布机（或 [RUNBOOK §1](https://github.com/kore-pl/kore/blob/main/docs/RUNBOOK.md) 的临时密钥），**不入库、不进 GitHub / Gitee CI secret、不进日志**——本仓与两个镜像都不持有签发能力。
+- **验证 = CI 分层（不持有签名能力）**：`pull_request` 只验 schema / 版本账本 / 预设引用，**不验签**（贡献者没有私钥，改内容就无法提供有效 `.sig`）；`push main` 与 tag 全量验签，未签 / 错签 / 内容与 `.sig` 不一致直接红。CI 权限保持 `contents: read`，不注入任何密钥。
+
+### 内容变更的合并流程（维护者，4 步）
+
+1. **取内容**：把 PR 的内容改动取到本地发布分支（`git rebase` / `git am` / 手工 apply 均可）。此时**还没有**新的 `.sig`。
+2. **重签**：`KORE_INDEX_KEY=<seed> bash scripts/sign-index.sh` —— 用发布机上的私钥对改后的 `index/plugins.json` 重新签名，产出 `index/plugins.json.sig`（64 字节 raw 签名）。
+3. **双向验收**：`bash scripts/validate-index.sh` 必须 exit 0（正向）；再把 `plugins.json` 改一个字节，同一命令必须非 0（篡改反例），随后恢复原文。
+4. **同批提交推送**：内容与新的 `.sig` 放进**同一个提交**，先 `git push origin main`（Gitea 权威源），再推 `github` / `gitee` 镜像。只推内容不推 `.sig`，main 上的全量验签会直接红。
+
+### 三条硬规则
+
+- **内容改动必须同批重签**：`plugins.json` 任何字节变化都让旧 `.sig` 失效。不存在"先合并、下次补签"——`push main` 的全量验签会立刻红，而未签索引在 kore 侧一律 401。
+- **公钥变更必须与 kore 内核同批发布**：公钥是内核里的编译期常量，旧 `kored` 验新签名 → 商店**全部 401**，恢复只能重新编译并重启内核。公钥副本必须逐字一致（见下）。
+- **回滚时二进制与索引必须一起回滚**：只回滚索引 = 旧签名对新公钥失配；只回滚二进制 = 旧公钥不认新签名。两者必须在同一发布窗口内一起回到同一个已知良态（步骤见 RUNBOOK §1）。
+
+### 内置公钥与轮换窗口
+
+- **内置公钥（hex）**：`e3a00492b030fe00ccef267390d384c58fa9f651c073c448b8d0a729d58a0e9a`（第 36 把）。三处必须逐字一致：本仓 `scripts/validate-index.sh` 的 `PUB_HEX`、kore 内核 `internal/core/market/verify.go` 的 `IndexPublicKeyHex`、以及当前 `index/plugins.json.sig` 的签发密钥。
 - **轮换兼容窗口**（提案 §2 M2-B）：新公钥上线后必须保留**旧公钥验签能力一个发布周期**，确保轮换前已签发的索引在窗口内仍可验；窗口内新旧公钥并存，窗口结束才移除旧公钥并记 ADR。单版本公钥、无兼容窗口 = 断供死法（pre-mortem S-01）。**当前实现是内核内单个公钥常量（尚无多公钥并存机制）**，因此在多公钥验签落地前，轮换只能「同批改常量 + 重签 + 重启」，否则那段窗口就是验签空窗。
 - **禁止信任空窗**：`store.allow_unsigned=true` 只能显式配置并写 WARN 审计，**不得进默认配置**；默认配置出现该开关即为 FAIL。
 
-## CI 集成说明
+### 非目标：改成 CI 签发
+
+若未来改为 CI 签发，落点应是 **Gitea Actions** 的 tag / 手动 job + protected environment + 人工审批，**而不是 GitHub 镜像**——GitHub 只是镜像，私钥不进 GitHub。仓库拓扑与权威源口径见 [ADR-0024 §2](https://github.com/kore-pl/kore/blob/main/docs/DECISIONS/0024-repo-topology-and-gitea.md)。
+
+### CI 分层验签（实际实现）
+
+`.github/workflows/ci.yml` 按事件分流，同一 job 内两条互斥步骤：
 
 ```yaml
-# GitHub Actions（示意，secret 名 KORE_INDEX_KEY）
-- name: Sign index
+# PR：贡献者无私钥 → 跳过验签，只验 schema / 账本 / 预设（脚本打印「已跳过」）
+- name: make check（PR：schema / 账本 / 预设，跳过验签）
+  if: "github.event_name == 'pull_request'"
   env:
-    KORE_INDEX_KEY: ${{ secrets.KORE_INDEX_KEY }}
-  run: bash scripts/sign-index.sh
-- name: Validate index
-  run: bash scripts/validate-index.sh
+    KORE_INDEX_SKIP_SIG: "1"
+  run: make check
+
+# main / tag：发布侧全量校验，含 ed25519 验签，fail-closed
+- name: make check（push main / tag：全量含 ed25519 验签）
+  if: "github.event_name != 'pull_request'"
+  run: make check
 ```
 
-私钥只存在于 CI secret，不进仓、不进日志、不进容器镜像。
+`KORE_INDEX_SKIP_SIG=1` 是**唯一**的签名开关，只跳过 ed25519 验签；schema / 字段 / 账本 / 预设引用照常校验，缺 `index/plugins.json.sig` 仍 FAIL。合并前本地验收、发布前复核、`push main` / tag 一律禁止使用（脚本启动会打印当前模式）。
 
 <!-- oss:begin -->
 ## 开源与贡献
