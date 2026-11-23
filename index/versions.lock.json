@@ -76,6 +76,10 @@
       {
         "version": "0.3.0",
         "sha256": "9104823a39fbab2f19e9c1313a01ef41fb782a8e329abae29ac42ee80de828ee"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "d4a793551abbd7d59a526b6a154fe07b777b640a0dc6d5a566a149c16a5884e5"
       }
     ],
     "ssh-guard": [
@@ -322,6 +326,10 @@
       {
         "version": "0.1.1",
         "sha256": "feb979e360a592baa4d4afa034243e3f72c84aa93a00bfe9b939df9a67fe51a2"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "b46b7b8704f1012dfd05d4833c01fa6b693c33bef0e61693b380b0d4afb1f88f"
       }
     ],
     "discover": [
