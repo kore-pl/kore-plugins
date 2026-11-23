@@ -358,6 +358,10 @@
       {
         "version": "0.3.0",
         "sha256": "066d01c9ff2e2a94f6d8ed3e859038131db9b2c60884625441a7f86ea4ababf2"
+      },
+      {
+        "version": "0.3.1",
+        "sha256": "f16abf6e6644f3626a55b85a6c27bfd37d3da9d9c3e2a871236dff80ac1f99f0"
       }
     ],
     "db-mysql": [
@@ -514,6 +518,10 @@
       {
         "version": "0.3.1",
         "sha256": "fbaba38049ff42052fc991f7a4affbd5cc22bf588b8690d13ce5f2bd0152f2b4"
+      },
+      {
+        "version": "0.4.1",
+        "sha256": "201635abc29baaaa932d16723ed9b7a6a2c3b87477341772abc06bbf8137621d"
       }
     ],
     "container": [
@@ -540,6 +548,10 @@
       {
         "version": "0.5.0",
         "sha256": "af1e67138b81b7687274e89de422a08cdb92f0d781223015e3b1ba827ab6fc11"
+      },
+      {
+        "version": "0.5.1",
+        "sha256": "8d1b586b05fe8a2e3e9ada77dc34cdd56975cdb6004436b85ea8c2efdceb7279"
       }
     ],
     "app-deploy": [

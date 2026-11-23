@@ -67,7 +67,7 @@
     },
     {
       "id": "runtime-python",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "desired": "disabled"
     },
     {
@@ -97,12 +97,12 @@
     },
     {
       "id": "waf",
-      "version": "0.3.1",
+      "version": "0.4.1",
       "desired": "disabled"
     },
     {
       "id": "container",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "desired": "disabled"
     },
     {
