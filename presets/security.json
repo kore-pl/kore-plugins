@@ -12,7 +12,7 @@
     },
     {
       "id": "integrity",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "desired": "enabled"
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "id": "waf",
-      "version": "0.4.4",
+      "version": "0.4.5",
       "desired": "enabled"
     }
   ]

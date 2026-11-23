@@ -7,17 +7,17 @@
   "plugins": [
     {
       "id": "echo",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "desired": "enabled"
     },
     {
       "id": "runtime-node",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "desired": "enabled"
     },
     {
       "id": "runtime-python",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "desired": "enabled"
     }
   ]

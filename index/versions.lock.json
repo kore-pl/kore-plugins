@@ -18,6 +18,10 @@
       {
         "version": "0.1.4",
         "sha256": "eaf2d12874782e9ba3f2fe6ef6461cc10fe05f8003e8b0cbe839e66b66566386"
+      },
+      {
+        "version": "0.1.5",
+        "sha256": "0a2153ddb1f95c7b39f24f5876cf746aa46700ff40e5b70617b3dfd88d88a806"
       }
     ],
     "site": [
@@ -142,6 +146,10 @@
       {
         "version": "0.5.0",
         "sha256": "474f414cc5e1b2fb4f52d098960d9321800557371591c9f913418dea8bb4baa3"
+      },
+      {
+        "version": "0.5.1",
+        "sha256": "22f9ec4849045c890db547c042a9c6d78d763071664fd94b89a4aac560b4f8e3"
       }
     ],
     "cron": [
@@ -296,6 +304,10 @@
       {
         "version": "0.4.0",
         "sha256": "4010651b6e92190e7b7daf35a3792210ea764a62ee490922d3902b27fb31c478"
+      },
+      {
+        "version": "0.4.2",
+        "sha256": "5b6db686dd5cd5ee42434a2365c5b4b14f3ee0892bc01ef4c64a5ee5f29f2bdd"
       }
     ],
     "runtime-php": [
@@ -348,6 +360,10 @@
       {
         "version": "0.2.4",
         "sha256": "2033f3ed8519bb567ef306e7e3cfa4d6aefe808401454c569b14bb4f8e44f7bb"
+      },
+      {
+        "version": "0.2.5",
+        "sha256": "541fff7d1f1595c99c82bc4dc3008bc8b815bde369da068cd8403244d5243da7"
       }
     ],
     "runtime-python": [
@@ -382,6 +398,10 @@
       {
         "version": "0.3.1",
         "sha256": "f16abf6e6644f3626a55b85a6c27bfd37d3da9d9c3e2a871236dff80ac1f99f0"
+      },
+      {
+        "version": "0.3.2",
+        "sha256": "56348766fd3962d0ca8aacfc1caded7f54af446d1572ac360e7347d03350786e"
       }
     ],
     "db-mysql": [
@@ -446,6 +466,10 @@
       {
         "version": "0.3.3",
         "sha256": "c881cec23e1c6ad0151289a24ca063c0260d11669d8ac605dace9f35b4f79cc5"
+      },
+      {
+        "version": "0.3.4",
+        "sha256": "3f1e228b1028b4de2ee55638ed38288bda48e525258d23cac13dc5f4d0487855"
       }
     ],
     "redis": [
@@ -554,6 +578,10 @@
       {
         "version": "0.4.4",
         "sha256": "9db925059bd1fac3982c4e3a115ce646c4097c4f779d8f0e573a58e1fe3cc405"
+      },
+      {
+        "version": "0.4.5",
+        "sha256": "94680629192b3f000496a9b6c713e8de66ca8691f9958e941262dff953b934bd"
       }
     ],
     "container": [
@@ -592,6 +620,10 @@
       {
         "version": "0.5.4",
         "sha256": "940d220b6ebbc5b9e516d615eaa2b2ab91ddaa6cf8f76c3007e5a8f3ae539ddc"
+      },
+      {
+        "version": "0.5.5",
+        "sha256": "5d467fc4583b2627e43cf6df0e0a04aac1f3c5fd0fb6157f3b6f252692665e9c"
       }
     ],
     "app-deploy": [
