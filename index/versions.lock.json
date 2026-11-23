@@ -36,6 +36,10 @@
       {
         "version": "0.3.1",
         "sha256": "8fa58e36cc3b0465908efac118c0bee11aebfc64b0c342b280c99e05af682910"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "4f478ff661942fe8f9b4d9698f6cbaa238a98ba5be0e54407bcb1fd425da8770"
       }
     ],
     "file": [
@@ -300,6 +304,10 @@
       {
         "version": "0.3.1",
         "sha256": "9171571401afc5030f4e66bb8a97d2ea6b4d21b46ebdfbf5e7d7d458f3de7c1b"
+      },
+      {
+        "version": "0.3.2",
+        "sha256": "3ad89d6bcf42e9a512c1afeeb2f1085bb186c5c52f99e735b7a47b22c5efe2ef"
       }
     ],
     "db-postgres": [
