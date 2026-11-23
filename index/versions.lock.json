@@ -602,6 +602,10 @@
       {
         "version": "0.3.0",
         "sha256": "f3fdb914f01a7dfb074af8c460e39b86d485cf25b1ce212c9c825fedf627ea6a"
+      },
+      {
+        "version": "0.3.1",
+        "sha256": "2fa0e99e667c04d8e396c30140e93bb1d95792f87febff27909174315cfd3cbf"
       }
     ],
     "terminal": [
@@ -616,6 +620,10 @@
       {
         "version": "0.2.0",
         "sha256": "d72e4567533e1014cbc9ca5b271d5aa3665caddbf3dc0fadefec850bff446093"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "146a62bb92a13d4d14c0dd3b04a67e2f088a151cbb448d8db9b868f30115de88"
       }
     ],
     "process": [
