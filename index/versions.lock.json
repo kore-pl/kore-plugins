@@ -190,6 +190,10 @@
       {
         "version": "0.2.3",
         "sha256": "50a4035ce1511da3443c738aab1b57c86a8295f3bf659b4c55b5e45b47be929a"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "a392b063ca788212d48566e72c76d52713753a0a0f86f87bcd8d8d31b4a66e66"
       }
     ],
     "monitor": [
@@ -350,6 +354,10 @@
       {
         "version": "0.2.4",
         "sha256": "8565c6e0d2100b30c5b223d1c0165f2b41b56ec3c7c7ecc1ea4ae5c4867e3604"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "066d01c9ff2e2a94f6d8ed3e859038131db9b2c60884625441a7f86ea4ababf2"
       }
     ],
     "db-mysql": [
@@ -528,6 +536,10 @@
       {
         "version": "0.4.1",
         "sha256": "7054307e476aa442bf8cdc4168c254d537a9a7482f5e10ea4a09dfb7ef57930b"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "af1e67138b81b7687274e89de422a08cdb92f0d781223015e3b1ba827ab6fc11"
       }
     ],
     "app-deploy": [
@@ -586,6 +598,10 @@
       {
         "version": "0.2.2",
         "sha256": "6558b2f0c1427e005c62d02fc91393ccd9493e2720590d4c5b48fe3827065939"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "36d435246960b92ae4900fe07818d32e62d285d1b296e11a40b4976f85132328"
       }
     ],
     "discover": [
