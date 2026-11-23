@@ -172,6 +172,10 @@
       {
         "version": "0.6.0",
         "sha256": "3bf24afcb4c2abc44a7341952cf1fa8a0ab87ef8bb4d2822316f938e6c2d7eae"
+      },
+      {
+        "version": "0.7.0",
+        "sha256": "23a58e0b82a4d002b20d0af33ef81f0937549c361254d0080e7af5de7c3af1e5"
       }
     ],
     "ssh-guard": [
