@@ -37,7 +37,7 @@
     },
     {
       "id": "ssh-guard",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "desired": "disabled"
     },
     {
@@ -47,7 +47,7 @@
     },
     {
       "id": "logs",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "desired": "disabled"
     },
     {
@@ -97,12 +97,12 @@
     },
     {
       "id": "waf",
-      "version": "0.4.3",
+      "version": "0.4.4",
       "desired": "disabled"
     },
     {
       "id": "container",
-      "version": "0.5.2",
+      "version": "0.5.4",
       "desired": "disabled"
     },
     {

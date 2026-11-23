@@ -7,7 +7,7 @@
   "plugins": [
     {
       "id": "ssh-guard",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "desired": "enabled"
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "id": "waf",
-      "version": "0.4.3",
+      "version": "0.4.4",
       "desired": "enabled"
     }
   ]
