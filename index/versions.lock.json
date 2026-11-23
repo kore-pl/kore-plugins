@@ -356,6 +356,10 @@
       {
         "version": "0.4.0",
         "sha256": "2f3887e1d1895c29338549c205f7b451bf6eeaa022b6d85574087b5809afca60"
+      },
+      {
+        "version": "0.4.1",
+        "sha256": "721462dba3d23271fb892a4b063f141b0dc436fa83e9367cc23311bfd3c9c268"
       }
     ],
     "db-postgres": [
@@ -386,6 +390,10 @@
       {
         "version": "0.3.2",
         "sha256": "aa045dfa2735994ce70dcd302dd359eab35c35de5d419ec3d458c84c9502648f"
+      },
+      {
+        "version": "0.3.3",
+        "sha256": "c881cec23e1c6ad0151289a24ca063c0260d11669d8ac605dace9f35b4f79cc5"
       }
     ],
     "redis": [
