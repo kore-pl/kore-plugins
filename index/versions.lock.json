@@ -60,6 +60,10 @@
       {
         "version": "0.3.0",
         "sha256": "6e40c9954bae1ebcbf14b91403b0de61bca8f38686b25c5faba2e50a947309ac"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "c6ccc0459a63cbe229ae74fa494a1b31b9a339b0f47d6fa698bd0e035aad1626"
       }
     ],
     "integrity": [
@@ -74,6 +78,14 @@
       {
         "version": "0.2.0",
         "sha256": "07c9a83a26393e52f8e0aa996ffbcac1820a4dc0d39a856ae8b06e5f37057f3d"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "0f17c31e4edede59248a14adfb1606532eefca3199ca75527473e4285385ba4e"
+      },
+      {
+        "version": "0.3.1",
+        "sha256": "ed6580bb595ae92158f6808dc3e5518914d9bec63c78a8442b6bdce27a470799"
       }
     ],
     "cron": [
@@ -92,6 +104,10 @@
       {
         "version": "0.4.0",
         "sha256": "d4a793551abbd7d59a526b6a154fe07b777b640a0dc6d5a566a149c16a5884e5"
+      },
+      {
+        "version": "0.4.1",
+        "sha256": "1991002071ceb59e8109e58fd659297dc5890e5dcc8b9ef8891f4b770a47d6d4"
       }
     ],
     "ssh-guard": [
@@ -110,6 +126,10 @@
       {
         "version": "0.2.1",
         "sha256": "ac0a08fa1fa66df9737aca32b709231c884f3354210c0620dd7190e556825732"
+      },
+      {
+        "version": "0.2.2",
+        "sha256": "2311325120734b41cb8d4e383f24bd5e0c7dc4238df9016f40f11b5f0004706b"
       }
     ],
     "monitor": [
@@ -146,6 +166,14 @@
       {
         "version": "0.3.0",
         "sha256": "f00859b3bc81a7b4d712727f46e4806e65aca29d532688e6d7400608b07945cf"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "a2f82349826a079ee868eea00e8287a64502e7d426049b258bae7614859e2db5"
+      },
+      {
+        "version": "0.4.1",
+        "sha256": "2e540c366679adfac22fe1f0cc0de36b7d7cdaece1b12c98e9504666669d3b40"
       }
     ],
     "dns": [
@@ -160,6 +188,10 @@
       {
         "version": "0.2.0",
         "sha256": "49d2584046f1aa66cdde7d970151fa110a7b27c0c8e494a49a987e6dd53061b9"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "78ecb27a5ef26db2a8713f9897f920f1e0e73c5a015133008175bccca720c38f"
       }
     ],
     "runtime-php": [
@@ -174,6 +206,14 @@
       {
         "version": "0.2.0",
         "sha256": "2e8ab9fbbfdb065751ae6fa96b84bf1bce9985647d9da6059889f462ecffba96"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "33bd1665215ebdf75d29c43616222e9d8218727a0439ed0180f3e5f33aa86821"
+      },
+      {
+        "version": "0.2.2",
+        "sha256": "11fc63366f0e93bbf8b6693add0e8e86e7bcf634367a21d51e9adfac125233bc"
       }
     ],
     "runtime-node": [
@@ -188,6 +228,14 @@
       {
         "version": "0.2.0",
         "sha256": "4130ef4daf3c1ddb44646c05518d7e5c427f2abc051569ef517ea391e9fd2902"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "28ae6d6b997b8b36527365a8cdcef47219c7f3e365239552d89154334510ed91"
+      },
+      {
+        "version": "0.2.2",
+        "sha256": "9e99ef0e3c7ce517a55fce5f5377234693cfeea91e351b0bb10ce789d449e5ef"
       }
     ],
     "runtime-python": [
@@ -202,6 +250,10 @@
       {
         "version": "0.2.0",
         "sha256": "8b85d69a5fd8fdabb713ba4c7e15468a57ac520f6e6fe524bc4dca300db8b6ef"
+      },
+      {
+        "version": "0.2.2",
+        "sha256": "ad2c2995b4fa41d898929818a83d8d2fd6cdedcceb72174a93a02f57cec1b00c"
       }
     ],
     "db-mysql": [
@@ -238,6 +290,10 @@
       {
         "version": "0.2.1",
         "sha256": "a92cc13140a74954d1b36d3d28e009b83a66a490ac2e25071bdaa308d84b9389"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "0453c6080e5d58112463e46e6aa473ae1a60d0e605a0a5467973e5be040917f7"
       }
     ],
     "redis": [
@@ -252,6 +308,10 @@
       {
         "version": "0.4.0",
         "sha256": "07a20bba780b1583c241322ac287379a55a1b5e0be9c397c3aaab7b05427d985"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "d4749ff189cd59bed51383b09d931f12979f3e0e3ba810556efd6e90884b3331"
       }
     ],
     "backup": [
@@ -288,6 +348,10 @@
       {
         "version": "0.2.3",
         "sha256": "353d5626453276b2adeae4db935c2eb6837e84e2e59f052d96828d568b8c651b"
+      },
+      {
+        "version": "0.2.4",
+        "sha256": "983468d4c2abbca960137248dc507e9e98d71827b1be9757902af792a353f90c"
       }
     ],
     "waf": [
@@ -302,6 +366,10 @@
       {
         "version": "0.2.0",
         "sha256": "0df14e70c88cd8d277e8ec5bdb5a5dedc5f5843e2a6370a5015f7c4bca9cd85e"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "e526881e6de05b533781663c64982a61028a222ef32d0bf743f36d22d576270e"
       }
     ],
     "container": [
@@ -316,6 +384,10 @@
       {
         "version": "0.3.0",
         "sha256": "00c37c45d2c47dbd36c1004680be62d9665a833b8f72e3487727fa5b48baab47"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "754492dbc87e137f07acd46add6b17afab4d0300081cf761059ecada0a27b71c"
       }
     ],
     "app-deploy": [
@@ -358,6 +430,10 @@
       {
         "version": "0.2.0",
         "sha256": "b46b7b8704f1012dfd05d4833c01fa6b693c33bef0e61693b380b0d4afb1f88f"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "27510bc5040f8443ebedccdbe29fec6592928397a69595fc22372f50a84548d0"
       }
     ],
     "discover": [
@@ -368,6 +444,10 @@
       {
         "version": "0.2.0",
         "sha256": "5055b67dfe29f782f4735b3ebc4ff23164a450de52c1fc051bedf572a8f43387"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "6dda26217a294b6a0a6f67f295f89eb8188c89e90af57c36fb0b80fc7b70fa93"
       }
     ]
   }

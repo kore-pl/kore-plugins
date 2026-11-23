@@ -12,17 +12,17 @@
     },
     {
       "id": "ssl",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "desired": "enabled"
     },
     {
       "id": "dns",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "desired": "enabled"
     },
     {
       "id": "firewall",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "desired": "enabled"
     }
   ]

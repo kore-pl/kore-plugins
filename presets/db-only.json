@@ -12,7 +12,7 @@
     },
     {
       "id": "db-postgres",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "desired": "disabled"
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "id": "redis",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "desired": "enabled"
     }
   ]
