@@ -87,7 +87,7 @@
     },
     {
       "id": "backup",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "desired": "disabled"
     },
     {
@@ -97,12 +97,12 @@
     },
     {
       "id": "waf",
-      "version": "0.4.1",
+      "version": "0.4.3",
       "desired": "disabled"
     },
     {
       "id": "container",
-      "version": "0.5.1",
+      "version": "0.5.2",
       "desired": "disabled"
     },
     {

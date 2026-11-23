@@ -470,6 +470,10 @@
       {
         "version": "0.4.1",
         "sha256": "44134a9439b24a00c2792c5ffb41c5ad095c3a1a63114befdb31a57e803d0874"
+      },
+      {
+        "version": "0.4.2",
+        "sha256": "069edac82787a57e9d58ff2bb4846a7c013f52e29074cbffa7aabd0831da8d36"
       }
     ],
     "firewall": [
@@ -522,6 +526,10 @@
       {
         "version": "0.4.1",
         "sha256": "201635abc29baaaa932d16723ed9b7a6a2c3b87477341772abc06bbf8137621d"
+      },
+      {
+        "version": "0.4.3",
+        "sha256": "b9ac6ff17ba1498dbfdff8b2936e7f3dd31bf7d02e8e9368b18f62e79e552506"
       }
     ],
     "container": [
@@ -552,6 +560,10 @@
       {
         "version": "0.5.1",
         "sha256": "8d1b586b05fe8a2e3e9ada77dc34cdd56975cdb6004436b85ea8c2efdceb7279"
+      },
+      {
+        "version": "0.5.2",
+        "sha256": "975820ebfba94ee937b8bee304a81ea0866e88f4b7e1d4792cbcefcc77a578b6"
       }
     ],
     "app-deploy": [
@@ -628,6 +640,10 @@
       {
         "version": "0.3.0",
         "sha256": "6dda26217a294b6a0a6f67f295f89eb8188c89e90af57c36fb0b80fc7b70fa93"
+      },
+      {
+        "version": "0.3.1",
+        "sha256": "972d932b08797e7f96bf8e54ad49631e9151e9818f47c6bf48a4fe46502df165"
       }
     ]
   }
