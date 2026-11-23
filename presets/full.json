@@ -12,7 +12,7 @@
     },
     {
       "id": "site",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "desired": "enabled"
     },
     {
@@ -22,12 +22,12 @@
     },
     {
       "id": "ssl",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "desired": "disabled"
     },
     {
       "id": "integrity",
-      "version": "0.3.2",
+      "version": "0.3.3",
       "desired": "disabled"
     },
     {
@@ -47,7 +47,7 @@
     },
     {
       "id": "logs",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "desired": "disabled"
     },
     {
@@ -72,12 +72,12 @@
     },
     {
       "id": "db-mysql",
-      "version": "0.3.2",
+      "version": "0.4.0",
       "desired": "disabled"
     },
     {
       "id": "db-postgres",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "desired": "disabled"
     },
     {
@@ -87,12 +87,12 @@
     },
     {
       "id": "backup",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "desired": "disabled"
     },
     {
       "id": "firewall",
-      "version": "0.2.4",
+      "version": "0.2.6",
       "desired": "disabled"
     },
     {
@@ -107,7 +107,7 @@
     },
     {
       "id": "app-deploy",
-      "version": "0.2.0",
+      "version": "0.2.2",
       "desired": "disabled"
     }
   ]

@@ -48,6 +48,10 @@
       {
         "version": "0.4.2",
         "sha256": "a467c9dec113fa71fb1efa91ffaf72cc918209efe8934d61447b25615766dde5"
+      },
+      {
+        "version": "0.4.3",
+        "sha256": "26b0f4a347eb46556c77b04694e74422db1651052de4bb97d45079bd81238541"
       }
     ],
     "file": [
@@ -92,6 +96,10 @@
       {
         "version": "0.5.0",
         "sha256": "565009c6d86937dc63cda7cb1564d85c7d0c77fb7798ebc41588ed27a7320496"
+      },
+      {
+        "version": "0.5.1",
+        "sha256": "fb26d2decf596d5689b058d9ea036f1ff8bb27ca62209855b1e3c211ed297dd5"
       }
     ],
     "integrity": [
@@ -118,6 +126,10 @@
       {
         "version": "0.3.2",
         "sha256": "e6cf549b5d9b1c2f61f1df09d4abd5e8cc5a6225937cb7c69c350d08b91a6904"
+      },
+      {
+        "version": "0.3.3",
+        "sha256": "e55ca4bd44a06ea810ab0fc6953d77962227c1bb102e4dcbbbb407815ed4f8f0"
       }
     ],
     "cron": [
@@ -210,6 +222,10 @@
       {
         "version": "0.4.1",
         "sha256": "2e540c366679adfac22fe1f0cc0de36b7d7cdaece1b12c98e9504666669d3b40"
+      },
+      {
+        "version": "0.4.2",
+        "sha256": "6a210407e3b6ebb6443637298caf2eda9c76ea5357951cbbb0b051707fcf7caf"
       }
     ],
     "dns": [
@@ -336,6 +352,10 @@
       {
         "version": "0.3.2",
         "sha256": "3ad89d6bcf42e9a512c1afeeb2f1085bb186c5c52f99e735b7a47b22c5efe2ef"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "2f3887e1d1895c29338549c205f7b451bf6eeaa022b6d85574087b5809afca60"
       }
     ],
     "db-postgres": [
@@ -362,6 +382,10 @@
       {
         "version": "0.3.1",
         "sha256": "6321caaa3ec59b99471caf72778444a48c516d652e50b1b6ce0aee7824c7813a"
+      },
+      {
+        "version": "0.3.2",
+        "sha256": "aa045dfa2735994ce70dcd302dd359eab35c35de5d419ec3d458c84c9502648f"
       }
     ],
     "redis": [
@@ -398,6 +422,10 @@
       {
         "version": "0.4.0",
         "sha256": "5b30ba8a96a4fede6339a7743c66963c71ff06d7a5c1e0b39580ea3287393559"
+      },
+      {
+        "version": "0.4.1",
+        "sha256": "44134a9439b24a00c2792c5ffb41c5ad095c3a1a63114befdb31a57e803d0874"
       }
     ],
     "firewall": [
@@ -420,6 +448,10 @@
       {
         "version": "0.2.4",
         "sha256": "983468d4c2abbca960137248dc507e9e98d71827b1be9757902af792a353f90c"
+      },
+      {
+        "version": "0.2.6",
+        "sha256": "f034229f4fdf6db2a06a679aff583c848191b9918ef7f29166a24397f0b9f44e"
       }
     ],
     "waf": [
@@ -478,6 +510,10 @@
       {
         "version": "0.2.0",
         "sha256": "56ee944170685d5a51e06c435fa55eeac8f9e54f9d696b10a57ed019d945ba34"
+      },
+      {
+        "version": "0.2.2",
+        "sha256": "d64dca310fef47514cb92c0f2886b1359cb4a99771cccad350432de4cbd06bda"
       }
     ],
     "terminal": [
@@ -510,6 +546,10 @@
       {
         "version": "0.2.1",
         "sha256": "27510bc5040f8443ebedccdbe29fec6592928397a69595fc22372f50a84548d0"
+      },
+      {
+        "version": "0.2.2",
+        "sha256": "6558b2f0c1427e005c62d02fc91393ccd9493e2720590d4c5b48fe3827065939"
       }
     ],
     "discover": [

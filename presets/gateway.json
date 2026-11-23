@@ -7,12 +7,12 @@
   "plugins": [
     {
       "id": "site",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "desired": "enabled"
     },
     {
       "id": "ssl",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "desired": "enabled"
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "id": "firewall",
-      "version": "0.2.4",
+      "version": "0.2.6",
       "desired": "enabled"
     }
   ]

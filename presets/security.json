@@ -12,17 +12,17 @@
     },
     {
       "id": "integrity",
-      "version": "0.3.2",
+      "version": "0.3.3",
       "desired": "enabled"
     },
     {
       "id": "ssl",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "desired": "enabled"
     },
     {
       "id": "firewall",
-      "version": "0.2.4",
+      "version": "0.2.6",
       "desired": "enabled"
     },
     {
