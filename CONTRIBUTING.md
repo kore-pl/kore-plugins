@@ -1,6 +1,6 @@
 # 贡献指南（CONTRIBUTING）
 
-`kore-plugins` 是 **kore** 的插件索引仓：只发布 `index/plugins.json`、`index/plugins.json.sig`、`index/versions.lock.json`、`presets/*.json` 与静态市场页 `market/`，并带一套校验脚本。**本仓不配 GitHub CI**（2026-11-23 策略：CI 少执行，GitHub CI 只在 kore 根仓跑）：索引校验一律走本地 `bash scripts/validate-index.sh` / `bash scripts/validate-presets.sh` / `make check`。
+`kore-plugins` 是 **kore** 的插件索引仓：只发布 `index/plugins.json`、`index/plugins.json.sig`、`index/versions.lock.json`、`presets/*.json` 与静态市场页 `market/`，并带一套校验脚本。CI 只在 push main / tag / PR / 手动触发（2026-11-23 策略：CI 少执行）；索引校验以本地 `bash scripts/validate-index.sh` / `bash scripts/validate-presets.sh` / `make check` 为准。
 
 ## 1. 边界
 
@@ -19,7 +19,7 @@
 4. `requires_kore` / `depth_level` / `lifecycle` 来自插件 `info.json`，不得手写猜测值。
 5. 向 `index/versions.lock.json` 对应 id 的数组**追加** `{version, sha256}`；不删旧版本、不改历史条目。
 6. 同步 `presets/*.json`：预设里固定的 `{id, version, desired}` 必须与索引版本一致；`depth_level=basic` 的插件所在预设 `out_of_box` 必须为 `false`（G-20）。
-7. 改完重跑签名：签名对象是 `index/plugins.json` 文件本体，`bash scripts/sign-index.sh` 产出 `index/plugins.json.sig`；签名密钥由发布方持有（`KORE_INDEX_KEY` 环境变量注入，本地或密钥管理；不进仓、不进日志）。
+7. 改完重跑签名：签名对象是 `index/plugins.json` 文件本体，`bash scripts/sign-index.sh` 产出 `index/plugins.json.sig`；签名密钥只存在于 CI secret（`KORE_INDEX_KEY`）或发布方本地，不进仓、不进日志。
 8. 重建市场页数据：`bash scripts/build-market.sh`（生成 `market/plugins.js`，页面断网可开、无外链）。
 
 **同一 `id@version` 只允许一个 sha**：任何改变 dist sha 的改动必须 bump 版本并追加基线；`validate-index.sh` 会拒绝同版本换 sha、版本回退与跳版。
