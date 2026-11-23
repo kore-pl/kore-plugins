@@ -24,6 +24,14 @@
       {
         "version": "0.2.0",
         "sha256": "5cb01e7bd9f391dd00d171750d48b1b46185cec89cde23b27b85ea72a49058e9"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "ab47cb79900279c1274cb23ae9c65c9c32fd448e8709302ef5b792b9c4c8bff3"
+      },
+      {
+        "version": "0.3.1",
+        "sha256": "8fa58e36cc3b0465908efac118c0bee11aebfc64b0c342b280c99e05af682910"
       }
     ],
     "file": [
@@ -34,6 +42,10 @@
       {
         "version": "0.2.1",
         "sha256": "5ae179a16ff330213e28a064a3448af0b36884eb4b0560c001fc32fe3754d4f0"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "4e9b4a41233f9a6a5acec8ccdd46bd5af173c6952298238ad393ba3551a2ddc5"
       }
     ],
     "ssl": [
@@ -94,6 +106,10 @@
       {
         "version": "0.2.0",
         "sha256": "c3032685f0130f97f2033fd710758f98355b8a4478cd820dacd8bf48435dfba3"
+      },
+      {
+        "version": "0.2.1",
+        "sha256": "ac0a08fa1fa66df9737aca32b709231c884f3354210c0620dd7190e556825732"
       }
     ],
     "monitor": [
@@ -112,6 +128,10 @@
       {
         "version": "0.2.1",
         "sha256": "fb153e56482c58268a18fc0473f309dfab0ea1fbb5195a6ffd6e37199d8f16b5"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "db747aad1dc533c9275f1e53abba27c90f5a4e0c32bfd6de2f6213ad4f5ba667"
       }
     ],
     "logs": [
@@ -246,6 +266,10 @@
       {
         "version": "0.3.0",
         "sha256": "201c424ec6c00d1e7affe3378475952993bf10b975f46bd3503458a87b50a90c"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "5b30ba8a96a4fede6339a7743c66963c71ff06d7a5c1e0b39580ea3287393559"
       }
     ],
     "firewall": [
@@ -316,6 +340,10 @@
       {
         "version": "0.1.1",
         "sha256": "0e75b2ae0171675a09b4c31c1a8a230238d0511a46ac73a4365811b5fbc0ca36"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "d72e4567533e1014cbc9ca5b271d5aa3665caddbf3dc0fadefec850bff446093"
       }
     ],
     "process": [
