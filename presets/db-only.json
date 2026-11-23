@@ -2,8 +2,8 @@
   "schema_version": 1,
   "id": "db-only",
   "name": "仅数据库",
-  "description": "纯数据场景：db-mysql 管理 MySQL/MariaDB，file 文件管理、backup 备份、redis 缓存协作；db-postgres 与 db-mysql 在索引中声明互斥，故仅引用并标记 disabled、按需切换。全部生产级，开箱可用。",
-  "out_of_box": true,
+  "description": "纯数据场景：db-mysql 管理 MySQL/MariaDB，file 文件管理、backup 备份、redis 缓存协作；db-postgres 与 db-mysql 在索引中声明互斥，故仅引用并默认不启用，需要 PostgreSQL 时手动切换。默认启用的 db-mysql / file / backup / redis 均为生产级；db-postgres 为基础级（basic）、边界能力延到 v1.1，故本预设非开箱可用。",
+  "out_of_box": false,
   "plugins": [
     {
       "id": "db-mysql",
