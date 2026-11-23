@@ -37,6 +37,8 @@ bash scripts/build-market.sh   # 生成 market/plugins.js（断网可开，构�
 
 **非 schema 字段 `capabilities`**：按当前索引快照，3 条历史条目（`terminal 0.2.0`、`process 0.2.1`、`discover 0.3.0`）多带 `capabilities` 数组。它**不是** kore `market.Plugin` 的 12 字段 schema 之一，解析端 lenient 忽略（不参与校验、不参与安装判定）。**不得为此改 `index/plugins.json`**——索引内容与 `plugins.json.sig` 绑定，改内容必须重新签名（私钥不在本机），留待下次重签时统一清理。
 
+**`size_bytes` 口径**：该值是各插件仓 `info.json` 里的**自指估算值**（`info.json` 在 tarball 内，改这个数字会改包体本身），与 release 资产实测 size 的偏差可达 ±32 字节且非单调——精确相等通常存在但不保证（`container 0.5.1` 用精确搜索取到不动点 `1527626`；`ssh-guard 0.3.0` 实测 2840608 / 声明 2840609 属正常）。**索引入库与下载校验以 release 资产实测 size 为准，声明值仅作预检参考**；详见 `scripts/validate-index.sh` 顶部注释。
+
 ## 场景预设（`presets/`）
 
 8 类预设均为 `schema_version=1` 的 JSON，含 `id / name / description / out_of_box / plugins[]`，每项插件引用 `{id, version, desired}`（`desired` ∈ `enabled|disabled`）。**只引用索引中真实存在的插件 id，且 `version` 必须与 `index/plugins.json` 一致**（`validate-presets.sh` 强校验，不一致即 FAIL）；各预设的具体组成以 `presets/*.json` 为准，下表只说明用途与口径。

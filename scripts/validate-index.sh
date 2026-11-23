@@ -12,6 +12,16 @@
 #   × 合并前本地验收、发布前复核 —— 判定「索引可发布」的场合必须全量验签；
 #   × 把跳过模式的退出码当成「索引校验通过」写进报告 / PR 证据。
 # 跳过模式下仍要求 index/plugins.json.sig 存在（缺文件是仓库损坏，不放过）。
+#
+# size_bytes 口径（权威说明，改索引或改校验前先读）：
+#   size_bytes 是**自指估算值**：它写在插件仓 info.json 里，而 info.json 又被打进 dist tarball，
+#   改这个数字会改包体本身——数字位变化会移动 deflate 块边界，并改变 SHA256SUMS 里 info.json 的
+#   摘要行，实测 diff = 包体 - 声明 在 -29..+32 区间呈**稀疏混沌映射**，不是 ±1/±2 的微抖。
+#   「声明 == 实测」的精确点通常存在但不保证：container 0.5.1 用「±64 窗口精确优先搜索」拿到
+#   不动点 1527626（声明==实测）；ssh-guard 0.3.0 在旧窗口内无精确点，实测 2840608 vs 声明
+#   2840609 属正常，不构成缺陷。
+#   **因此：索引与下载校验一律以 release 资产实测 size 为准；info.json 的 size_bytes 仅作预检参考，
+#   不作为判定依据。** 本脚本只校验它是非负整数（schema 层），不与包体比对。
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -72,6 +82,8 @@ for i, item in enumerate(plugins):
     ids.add(pid)
     if not re.fullmatch(r"[0-9a-f]{64}", item["sha256"]):
         sys.exit(f"[FAIL] {pid}.sha256 非 64 位小写 hex: {item['sha256']}")
+    # 只做 schema 层校验（非负整数）。size_bytes 是自指估算值，偏差可到 ±32 且非单调，
+    # 权威尺寸以 release 资产实测为准——不要在这里加「与包体比对」的校验。
     if not isinstance(item["size_bytes"], int) or item["size_bytes"] < 0:
         sys.exit(f"[FAIL] {pid}.size_bytes 非法")
     if item["depth_level"] not in ("production", "basic"):
