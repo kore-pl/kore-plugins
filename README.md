@@ -69,7 +69,7 @@ make check                          # 聚合：索引校验 + 预设校验
 
 索引级 ed25519 签名**前移到 M2**（信任空窗 = 0）：签名对象 = `plugins.json` 文件本体，公钥内置 kore 二进制，未签名索引默认拒绝。
 
-- **内置演示公钥（hex）**：`8f9e4c8585cad9745be7fdcb9c5ecd9137fccd3d45a9c29ded8ccbadb95ec684`。本仓用临时演示密钥签发，私钥不入库；生产须由发布方持有正式密钥并同步更新内核常量。
+- **内置演示公钥（hex）**：`3e5333bfdd43554f451fdad6b91fcaa05fd4acfa671b2d7a582e77b087ee9f55`。本仓用临时演示密钥签发，私钥不入库；生产须由发布方持有正式密钥并同步更新内核常量。
 - **签名**：CI 在 release 流水线注入 `KORE_INDEX_KEY`（私钥 seed hex，仅存 CI secret），执行 `bash scripts/sign-index.sh` 产出 `index/plugins.json.sig`（64 字节 raw 签名），随后发布 `index/`。
 - **轮换兼容窗口**（提案 §2 M2-B）：新公钥上线后必须保留**旧公钥验签能力一个发布周期**，确保轮换前已签发的索引在窗口内仍可验；窗口内新旧公钥并存，窗口结束才移除旧公钥并记 ADR。单版本公钥、无兼容窗口 = 断供死法（pre-mortem S-01）。
 - **禁止信任空窗**：`store.allow_unsigned=true` 只能显式配置并写 WARN 审计，**不得进默认配置**；默认配置出现该开关即为 FAIL。
