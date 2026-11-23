@@ -44,6 +44,10 @@
       {
         "version": "0.2.1",
         "sha256": "8a75cd70c1deeacf87868f28254a5830f7be67c8ceaf2c946a428a3d43d36eb9"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "6e40c9954bae1ebcbf14b91403b0de61bca8f38686b25c5faba2e50a947309ac"
       }
     ],
     "integrity": [
@@ -68,6 +72,10 @@
       {
         "version": "0.2.1",
         "sha256": "3be9ce4ae6c3203783fe0ce05dd487a41bd204a8cec4e3d69a207e3c919dbfdd"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "9104823a39fbab2f19e9c1313a01ef41fb782a8e329abae29ac42ee80de828ee"
       }
     ],
     "ssh-guard": [
@@ -116,6 +124,10 @@
       {
         "version": "0.1.1",
         "sha256": "f9843ee8a11ef5c217f61699b15ab969b08d5b4d743f2d4e282a30aeb9332d09"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "49d2584046f1aa66cdde7d970151fa110a7b27c0c8e494a49a987e6dd53061b9"
       }
     ],
     "runtime-php": [
@@ -214,6 +226,10 @@
       {
         "version": "0.2.1",
         "sha256": "a84b4eb294a267466721f3e326e8e7c371ae134767081d572120f46f71378ece"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "201c424ec6c00d1e7affe3378475952993bf10b975f46bd3503458a87b50a90c"
       }
     ],
     "firewall": [
@@ -242,6 +258,10 @@
       {
         "version": "0.1.1",
         "sha256": "6d7c384d919429233146b043ae38d6b90dc2afdad7a2f8bff6077c0c09007f5a"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "0df14e70c88cd8d277e8ec5bdb5a5dedc5f5843e2a6370a5015f7c4bca9cd85e"
       }
     ],
     "container": [

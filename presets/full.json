@@ -22,7 +22,7 @@
     },
     {
       "id": "ssl",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "desired": "disabled"
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "id": "cron",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "desired": "disabled"
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "id": "dns",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "desired": "disabled"
     },
     {
@@ -87,7 +87,7 @@
     },
     {
       "id": "backup",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "desired": "disabled"
     },
     {
@@ -97,7 +97,7 @@
     },
     {
       "id": "waf",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "desired": "disabled"
     },
     {
