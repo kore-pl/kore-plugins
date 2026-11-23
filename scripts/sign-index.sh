@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # 用 KORE_INDEX_KEY（ed25519 私钥 32 字节 seed 的 hex，64 字符）签 plugins.json → .sig。
-# CI 集成：在 release 流水线中注入 KORE_INDEX_KEY secret，先 sign 再发布 index/。
-# 私钥只存在于 CI secret / 运维本地，绝不入库。
+# 执行者 = 发布方（维护者），在自己的发布机上跑：签名是发布动作，不是 CI 动作。
+# KORE_INDEX_KEY 的值（私钥 seed）只存在于发布机 / 发布时的临时密钥：绝不入库，
+#   绝不进 GitHub / Gitee CI secret，也不进日志（CI 只验签、不签名）。
+# CI 口径见 .github/workflows/ci.yml：push main / tag 全量验签；PR 用 KORE_INDEX_SKIP_SIG=1 跳过验签。
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"

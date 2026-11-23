@@ -1,6 +1,6 @@
 # 贡献指南（CONTRIBUTING）
 
-`kore-plugins` 是 **kore** 的插件索引仓：只发布 `index/plugins.json`、`index/plugins.json.sig`、`index/versions.lock.json`、`presets/*.json` 与静态市场页 `market/`，并带一套校验脚本。CI 只在 push main / tag / PR / 手动触发（2026-11-23 策略：CI 少执行）；索引校验以本地 `bash scripts/validate-index.sh` / `bash scripts/validate-presets.sh` / `make check` 为准。
+`kore-plugins` 是 **kore** 的插件索引仓：只发布 `index/plugins.json`、`index/plugins.json.sig`、`index/versions.lock.json`、`presets/*.json` 与静态市场页 `market/`，并带一套校验脚本。CI 只在 push main / tag / PR / 手动触发（2026-11-23 策略：CI 少执行）；索引校验以本地 `bash scripts/validate-index.sh` / `bash scripts/validate-presets.sh` / `make check` 为准。**CI 分层**：PR 只验 schema / 版本账本 / 预设引用（跳过验签），push main 与 tag 才全量验签——签名是发布方动作，贡献者不签名（见 §2.1）。
 
 ## 1. 边界
 

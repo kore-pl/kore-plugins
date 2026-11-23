@@ -18,7 +18,7 @@
 ## 本仓攻击面
 
 - **索引篡改**：改 `sha256` / `download_url` / `version` 指向恶意包。防线是安装时由 `kore` 本地复算 sha256 并比对；索引本身不证明包可信。
-- **签名链**：`plugins.json.sig` 是 ed25519 签名（64 字节 raw），公钥内置 `kore` 二进制。私钥泄露、签名重放、替换公钥都属高危；私钥只允许存在于 CI secret（`KORE_INDEX_KEY`）或发布方本地，不进仓、不进日志。
+- **签名链**：`plugins.json.sig` 是 ed25519 签名（64 字节 raw），公钥内置 `kore` 二进制。私钥泄露、签名重放、替换公钥都属高危；**私钥由发布方持有**（发布机 / 发布时的临时密钥），**不入库、不进 GitHub CI secret**。**CI 只验签、不签名**——`push main` / tag 全量验签，PR 只验 schema（`KORE_INDEX_SKIP_SIG=1`，因为贡献者无私钥）。若未来改为 CI 签发，落点应是 **Gitea Actions** 的 tag / 手动 job + protected environment + 人工审批，而不是 GitHub 镜像。
 - **供应链**：`download_url` 指向的 release 资产、插件仓的构建环境与发布权限。索引与插件仓任一被接管都会影响安装链路。
 - **校验脚本**：`scripts/validate-index.sh` / `scripts/validate-presets.sh` 是合并前门禁，放宽校验或吞掉 FAIL 等于移除防线。
 - **静态市场页**：`market/index.html` 必须断网可开、无 CDN、无 http(s) 外链；引入任何外部请求都属回归。
