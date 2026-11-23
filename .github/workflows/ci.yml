@@ -1,0 +1,32 @@
+name: CI
+
+# 与 kore 同一策略（2026-11-23）：CI 少执行——push main / tag v* / PR / 手动。
+# 索引仓只有静态数据与校验脚本：check 跑仓内校验，不做构建。
+on:
+  push:
+    branches: ["main"]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: index + presets 校验
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: validate-index
+        run: bash scripts/validate-index.sh
+      - name: 开源九件套自检
+        run: |
+          for f in CONTRIBUTING.md SECURITY.md CODE_OF_CONDUCT.md AGENTS.md \
+                   .github/PULL_REQUEST_TEMPLATE.md .github/workflows/ci.yml; do
+            test -f "$f" || { echo "缺 $f"; exit 1; }
+          done

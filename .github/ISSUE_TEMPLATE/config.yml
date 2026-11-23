@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 安全漏洞披露
+    url: https://github.com/kore-pl/kore-plugins/blob/main/SECURITY.md
+    about: 索引篡改、签名与供应链问题请不要开公开 issue，按本仓 SECURITY.md 私下报告。
+  - name: 插件包本身的问题
+    url: https://github.com/kore-pl
+    about: 安装失败、插件行为异常请报到对应的 kore-plugin-<id> 仓库，本仓只维护索引元数据。
+  - name: 协议与 SDK 文档
+    url: https://github.com/kore-pl/kore/blob/main/docs/PLUGIN-SDK.md
+    about: 插件协议、SDK 与生命周期说明在 kore 仓 docs。

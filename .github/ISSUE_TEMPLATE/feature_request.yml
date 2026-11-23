@@ -1,0 +1,71 @@
+name: 插件收录请求
+description: 请求把某个插件收录进索引或更新其版本
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        收录前提：插件已在独立仓库发版，tag 与 release 资产齐备，`info.json` 声明了 `requires_kore` / `depth_level` / `lifecycle`。
+        本仓不审核插件质量，也不代管包；收录只代表索引入口存在。
+
+  - type: input
+    id: plugin-repo
+    attributes:
+      label: 插件仓库地址
+      placeholder: "https://github.com/kore-pl/kore-plugin-<id>"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-id-version
+    attributes:
+      label: 插件 id 与待收录版本
+      placeholder: "my-plugin@0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: release-asset
+    attributes:
+      label: Release 资产地址
+      description: 产物 `dist/<id>-<version>.tar.gz` 的 release 下载链接，以及对应 `.sha256` 内容。
+      placeholder: "https://github.com/kore-pl/kore-plugin-<id>/releases/download/v0.1.0/<id>-0.1.0.tar.gz"
+    validations:
+      required: true
+
+  - type: textarea
+    id: metadata
+    attributes:
+      label: 元数据
+      description: 粘贴插件 `info.json`（或至少 id / name / version / requires_kore / depth_level / lifecycle / depends_on / conflicts / scenario_tags / size_bytes）。
+      render: json
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scenario
+    attributes:
+      label: 所属预设
+      description: 该插件应进入哪些预设；basic 深度插件所在预设必须标非开箱可用。
+      multiple: true
+      options:
+        - minimal
+        - dev
+        - web-lite
+        - web-pro
+        - db-only
+        - gateway
+        - security
+        - full
+        - 暂不进入预设
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息
+      description: 与已有插件是否冲突、是否需要特定宿主条件、是否有反向验证结果。
+    validations:
+      required: false
