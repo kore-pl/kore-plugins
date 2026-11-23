@@ -218,12 +218,12 @@
     {
       "id": "db-mysql",
       "name": "MySQL/MariaDB 管理插件",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "depth_level": "production",
       "lifecycle": "lazy",
-      "size_bytes": 1539770,
-      "sha256": "d89c057c14b9865ee69bd46894bffa32fb73fe3158379c47c0e5feabc474acd8",
-      "download_url": "https://github.com/pengtang1024/kore-plugin-db-mysql/releases/download/v0.3.0/db-mysql-0.3.0.tar.gz",
+      "size_bytes": 1540702,
+      "sha256": "9171571401afc5030f4e66bb8a97d2ea6b4d21b46ebdfbf5e7d7d458f3de7c1b",
+      "download_url": "https://github.com/pengtang1024/kore-plugin-db-mysql/releases/download/v0.3.1/db-mysql-0.3.1.tar.gz",
       "requires_kore": ">=0.1.0 <0.2.0",
       "depends_on": [],
       "conflicts": [

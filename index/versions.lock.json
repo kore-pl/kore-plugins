@@ -168,6 +168,10 @@
       {
         "version": "0.3.0",
         "sha256": "d89c057c14b9865ee69bd46894bffa32fb73fe3158379c47c0e5feabc474acd8"
+      },
+      {
+        "version": "0.3.1",
+        "sha256": "9171571401afc5030f4e66bb8a97d2ea6b4d21b46ebdfbf5e7d7d458f3de7c1b"
       }
     ],
     "db-postgres": [
