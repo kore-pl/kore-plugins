@@ -122,6 +122,10 @@
       {
         "version": "0.1.1",
         "sha256": "4706b8f9f667c75940cc55d64a7cdcc06cae55ead44bd39c0368099d6da04fca"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "2e8ab9fbbfdb065751ae6fa96b84bf1bce9985647d9da6059889f462ecffba96"
       }
     ],
     "runtime-node": [
@@ -146,6 +150,10 @@
       {
         "version": "0.1.1",
         "sha256": "3bace78010e1cd422c19e742050eb25f937014517e2550d594107c9817531f27"
+      },
+      {
+        "version": "0.2.0",
+        "sha256": "8b85d69a5fd8fdabb713ba4c7e15468a57ac520f6e6fe524bc4dca300db8b6ef"
       }
     ],
     "db-mysql": [
