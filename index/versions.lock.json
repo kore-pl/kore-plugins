@@ -100,6 +100,10 @@
       {
         "version": "0.5.1",
         "sha256": "fb26d2decf596d5689b058d9ea036f1ff8bb27ca62209855b1e3c211ed297dd5"
+      },
+      {
+        "version": "0.6.0",
+        "sha256": "832a06ebcb56b95aa35e93a1a5a91a19677e7d1698c053938ed838b7931f5f1f"
       }
     ],
     "integrity": [
@@ -130,6 +134,10 @@
       {
         "version": "0.3.3",
         "sha256": "e55ca4bd44a06ea810ab0fc6953d77962227c1bb102e4dcbbbb407815ed4f8f0"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "4358320e002acc742d4fa71b9660b438c3810b64b1c3dbf376bf4343794c2e19"
       }
     ],
     "cron": [
@@ -152,6 +160,10 @@
       {
         "version": "0.4.1",
         "sha256": "1991002071ceb59e8109e58fd659297dc5890e5dcc8b9ef8891f4b770a47d6d4"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "25a7f55886cf2b68de2680d7cc3fcc4500c7e16e0ebecad681f26529c90b2bc0"
       }
     ],
     "ssh-guard": [
@@ -226,6 +238,10 @@
       {
         "version": "0.4.2",
         "sha256": "6a210407e3b6ebb6443637298caf2eda9c76ea5357951cbbb0b051707fcf7caf"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "d34bf34dba289eed2afc9c719e53396bf702066d28a3aec213bab49fbf7eb2ac"
       }
     ],
     "dns": [
@@ -252,6 +268,10 @@
       {
         "version": "0.3.2",
         "sha256": "a2953453c0e700bcbe1c01fb34589048ebaeb847f6fa290cae27f7ad49b12a47"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "4010651b6e92190e7b7daf35a3792210ea764a62ee490922d3902b27fb31c478"
       }
     ],
     "runtime-php": [
@@ -412,6 +432,10 @@
       {
         "version": "0.5.0",
         "sha256": "d4749ff189cd59bed51383b09d931f12979f3e0e3ba810556efd6e90884b3331"
+      },
+      {
+        "version": "0.6.0",
+        "sha256": "3088ef0ee71808c4efbabf569006e814ecce9a22175bd13d1819ea5abb3b01fc"
       }
     ],
     "backup": [
@@ -522,6 +546,10 @@
       {
         "version": "0.2.2",
         "sha256": "d64dca310fef47514cb92c0f2886b1359cb4a99771cccad350432de4cbd06bda"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "f3fdb914f01a7dfb074af8c460e39b86d485cf25b1ce212c9c825fedf627ea6a"
       }
     ],
     "terminal": [

@@ -22,17 +22,17 @@
     },
     {
       "id": "ssl",
-      "version": "0.5.1",
+      "version": "0.6.0",
       "desired": "disabled"
     },
     {
       "id": "integrity",
-      "version": "0.3.3",
+      "version": "0.4.0",
       "desired": "disabled"
     },
     {
       "id": "cron",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "desired": "disabled"
     },
     {
@@ -47,12 +47,12 @@
     },
     {
       "id": "logs",
-      "version": "0.4.2",
+      "version": "0.5.0",
       "desired": "disabled"
     },
     {
       "id": "dns",
-      "version": "0.3.2",
+      "version": "0.4.0",
       "desired": "disabled"
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "id": "redis",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "desired": "disabled"
     },
     {
@@ -107,7 +107,7 @@
     },
     {
       "id": "app-deploy",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "desired": "disabled"
     }
   ]

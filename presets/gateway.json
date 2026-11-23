@@ -12,12 +12,12 @@
     },
     {
       "id": "ssl",
-      "version": "0.5.1",
+      "version": "0.6.0",
       "desired": "enabled"
     },
     {
       "id": "dns",
-      "version": "0.3.2",
+      "version": "0.4.0",
       "desired": "enabled"
     },
     {
