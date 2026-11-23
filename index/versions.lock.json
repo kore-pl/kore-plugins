@@ -64,6 +64,10 @@
       {
         "version": "0.4.0",
         "sha256": "c6ccc0459a63cbe229ae74fa494a1b31b9a339b0f47d6fa698bd0e035aad1626"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "565009c6d86937dc63cda7cb1564d85c7d0c77fb7798ebc41588ed27a7320496"
       }
     ],
     "integrity": [
