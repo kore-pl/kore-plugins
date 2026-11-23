@@ -12,12 +12,12 @@
     },
     {
       "id": "runtime-node",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "desired": "enabled"
     },
     {
       "id": "runtime-python",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "desired": "enabled"
     }
   ]

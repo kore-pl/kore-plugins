@@ -44,6 +44,10 @@
       {
         "version": "0.4.1",
         "sha256": "17ba57e5385cbd968bc38acf79c8cc8f2586b500820213dc7a45204150dfbe13"
+      },
+      {
+        "version": "0.4.2",
+        "sha256": "a467c9dec113fa71fb1efa91ffaf72cc918209efe8934d61447b25615766dde5"
       }
     ],
     "file": [
@@ -62,6 +66,10 @@
       {
         "version": "0.3.1",
         "sha256": "1e9b6a2e5c373907ab22686a2fdd60b31c38edc814d27bfd5c8c3d866218725b"
+      },
+      {
+        "version": "0.3.2",
+        "sha256": "e4079c3c9382b4561045b0f8e246bf45448a024bc81f6c37e19232913efa5ea5"
       }
     ],
     "ssl": [
@@ -224,6 +232,10 @@
       {
         "version": "0.3.1",
         "sha256": "ac95abff57bc3ff11b175f337dd2f1d6cb9b9fb33f517b03b5bd8c0e6812de7f"
+      },
+      {
+        "version": "0.3.2",
+        "sha256": "a2953453c0e700bcbe1c01fb34589048ebaeb847f6fa290cae27f7ad49b12a47"
       }
     ],
     "runtime-php": [
@@ -272,6 +284,10 @@
       {
         "version": "0.2.3",
         "sha256": "b62595f543cd60db3027d8aa42315fc5167c800afc774fd25fac5472a9ddbc57"
+      },
+      {
+        "version": "0.2.4",
+        "sha256": "2033f3ed8519bb567ef306e7e3cfa4d6aefe808401454c569b14bb4f8e44f7bb"
       }
     ],
     "runtime-python": [
@@ -294,6 +310,10 @@
       {
         "version": "0.2.3",
         "sha256": "f0341b3cfcf588cb5fb48c8e49a3fb8365f6a00c6cfa947cfbd10a1f00fe0f38"
+      },
+      {
+        "version": "0.2.4",
+        "sha256": "8565c6e0d2100b30c5b223d1c0165f2b41b56ec3c7c7ecc1ea4ae5c4867e3604"
       }
     ],
     "db-mysql": [

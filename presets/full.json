@@ -12,12 +12,12 @@
     },
     {
       "id": "site",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "desired": "enabled"
     },
     {
       "id": "file",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "desired": "disabled"
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "id": "dns",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "desired": "disabled"
     },
     {
@@ -62,12 +62,12 @@
     },
     {
       "id": "runtime-node",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "desired": "disabled"
     },
     {
       "id": "runtime-python",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "desired": "disabled"
     },
     {
