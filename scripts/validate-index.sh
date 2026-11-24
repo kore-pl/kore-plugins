@@ -13,6 +13,12 @@
 #   × 把跳过模式的退出码当成「索引校验通过」写进报告 / PR 证据。
 # 跳过模式下仍要求 index/plugins.json.sig 存在（缺文件是仓库损坏，不放过）。
 #
+# market 一致性（第 1c 步，勿删）：
+#   market/plugins.js 由 scripts/build-market.sh 从 index/plugins.json 生成后落盘为静态文件，
+#   页面运行期不读索引——所以改索引不会自动更新商店页，会出现「商店页旧版本 / 索引新版本」。
+#   1c 步调用 build-market.sh --check 做 byte 级比对（生成器确定性），不一致即 FAIL，
+#   **不受 KORE_INDEX_SKIP_SIG 影响**：只改内容的 PR 同样必须同轮重建市场页。
+#
 # size_bytes 口径（权威说明，改索引或改校验前先读）：
 #   size_bytes 是**自指估算值**：它写在插件仓 info.json 里，而 info.json 又被打进 dist tarball，
 #   改这个数字会改包体本身——数字位变化会移动 deflate 块边界，并改变 SHA256SUMS 里 info.json 的
@@ -153,6 +159,15 @@ if os.path.isdir(presets):
             checked += 1
 print(f"[OK] 预设引用可解析（占位/已校验 {checked} 条引用）")
 PY
+
+# 1c) market 一致性：market/plugins.js 必须由当前索引生成（改索引必须同轮重建市场页）。
+#     只调用生成器的只读 --check 模式，不复制其转换逻辑（单一真源，避免两边漂移）；
+#     不受 KORE_INDEX_SKIP_SIG 影响——内容 PR 同样要过。
+MARKET_GEN="$ROOT/scripts/build-market.sh"
+[ -f "$MARKET_GEN" ] || fail "缺少 $MARKET_GEN（market 一致性校验无法执行）"
+if ! bash "$MARKET_GEN" --check; then
+  fail "market/plugins.js 与 index/plugins.json 不一致：改索引必须同轮重建（bash scripts/build-market.sh）并一起提交"
+fi
 
 # 2) ed25519 验签：用内置公钥 hex 重建 DER 公钥，验 .sig 对索引本体有效。
 #    KORE_INDEX_SKIP_SIG=1 时整步跳过（只限 PR schema 校验；见文件头禁止场景）。
