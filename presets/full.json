@@ -12,12 +12,12 @@
     },
     {
       "id": "site",
-      "version": "0.4.3",
+      "version": "0.4.4",
       "desired": "enabled"
     },
     {
       "id": "file",
-      "version": "0.3.2",
+      "version": "0.3.3",
       "desired": "disabled"
     },
     {
@@ -107,7 +107,7 @@
     },
     {
       "id": "app-deploy",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "desired": "disabled"
     }
   ]
