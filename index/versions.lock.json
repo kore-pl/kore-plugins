@@ -86,6 +86,10 @@
       {
         "version": "0.3.3",
         "sha256": "6c0d6cc93f8602846bd2cb57f614dcf26956de832f9d3cdfbe3b2e14bde54116"
+      },
+      {
+        "version": "0.3.4",
+        "sha256": "d72346a659c05dded23e3d33428257dbbe70de25bf1d3674abb5a80a2a29c100"
       }
     ],
     "ssl": [
