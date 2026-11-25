@@ -42,7 +42,7 @@ Informa de manipulación del índice, firma o cadena de suministro por [SECURITY
 ## Más documentos
 
 La descripción completa está en [README.md](../README.md).
-El procedimiento de divulgación está en [SECURITY.md](../SECURITY.md) y el diseño de seguridad en [docs/SECURITY.md](SECURITY.md).
+El procedimiento de divulgación está en [SECURITY.md](../SECURITY.md) y el diseño de seguridad en [SECURITY.md](../SECURITY.md).
 El historial de versiones está en [CHANGELOG.md](../CHANGELOG.md).
 Cómo contribuir: [CONTRIBUTING.md](../CONTRIBUTING.md).
 

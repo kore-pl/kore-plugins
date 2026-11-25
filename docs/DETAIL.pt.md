@@ -42,7 +42,7 @@ Relate falsificação do índice, cadeia de assinatura ou supply chain por [SECU
 ## Mais documentos
 
 A descrição completa está em [README.md](../README.md).
-O processo de divulgação está em [SECURITY.md](../SECURITY.md) e o projeto de segurança em [docs/SECURITY.md](SECURITY.md).
+O processo de divulgação está em [SECURITY.md](../SECURITY.md) e o projeto de segurança em [SECURITY.md](../SECURITY.md).
 O histórico de versões está em [CHANGELOG.md](../CHANGELOG.md).
 Como contribuir: [CONTRIBUTING.md](../CONTRIBUTING.md).
 

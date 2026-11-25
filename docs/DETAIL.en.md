@@ -42,7 +42,7 @@ Report index tampering, signature-chain or supply-chain issues through [SECURITY
 ## More documents
 
 See [README.md](../README.md) for the full description.
-See [SECURITY.md](../SECURITY.md) for disclosure and [docs/SECURITY.md](SECURITY.md) for the security design.
+See [SECURITY.md](../SECURITY.md) for disclosure and [SECURITY.md](../SECURITY.md) for the security design.
 See [CHANGELOG.md](../CHANGELOG.md) for version history.
 See [CONTRIBUTING.md](../CONTRIBUTING.md) for how to contribute.
 

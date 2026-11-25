@@ -42,7 +42,7 @@ bash scripts/build-market.sh       # 重建 market/plugins.js
 ## 更多文档
 
 完整说明见 [README.md](../README.md)。
-安全披露流程见 [SECURITY.md](../SECURITY.md)，安全设计见 [docs/SECURITY.md](SECURITY.md)。
+安全披露流程见 [SECURITY.md](../SECURITY.md)，安全设计见 [SECURITY.md](../SECURITY.md)。
 版本变更记录见 [CHANGELOG.md](../CHANGELOG.md)。
 贡献方式见 [CONTRIBUTING.md](../CONTRIBUTING.md)。
 

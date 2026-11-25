@@ -42,7 +42,7 @@ Melde Index-Manipulation, Signaturketten- oder Lieferkettenprobleme über [SECUR
 ## Weitere Dokumente
 
 Die vollständige Beschreibung steht in [README.md](../README.md).
-Der Offenlegungsprozess steht in [SECURITY.md](../SECURITY.md), das Sicherheitsdesign in [docs/SECURITY.md](SECURITY.md).
+Der Offenlegungsprozess steht in [SECURITY.md](../SECURITY.md), das Sicherheitsdesign in [SECURITY.md](../SECURITY.md).
 Die Versionshistorie steht in [CHANGELOG.md](../CHANGELOG.md).
 Wie du beiträgst: [CONTRIBUTING.md](../CONTRIBUTING.md).
 

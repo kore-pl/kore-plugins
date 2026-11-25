@@ -42,7 +42,7 @@ Signalez toute falsification de l’index, problème de signature ou de chaîne 
 ## Autres documents
 
 La description complète est dans [README.md](../README.md).
-La procédure de divulgation est dans [SECURITY.md](../SECURITY.md) et la conception de la sécurité dans [docs/SECURITY.md](SECURITY.md).
+La procédure de divulgation est dans [SECURITY.md](../SECURITY.md) et la conception de la sécurité dans [SECURITY.md](../SECURITY.md).
 L’historique des versions est dans [CHANGELOG.md](../CHANGELOG.md).
 Comment contribuer : [CONTRIBUTING.md](../CONTRIBUTING.md).
 

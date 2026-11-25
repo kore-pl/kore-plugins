@@ -42,7 +42,7 @@ bash scripts/build-market.sh       # пересобрать market/plugins.js
 ## Другие документы
 
 Полное описание — в [README.md](../README.md).
-Порядок раскрытия уязвимостей — в [SECURITY.md](../SECURITY.md), проект безопасности — в [docs/SECURITY.md](SECURITY.md).
+Порядок раскрытия уязвимостей — в [SECURITY.md](../SECURITY.md), проект безопасности — в [SECURITY.md](../SECURITY.md).
 История версий — в [CHANGELOG.md](../CHANGELOG.md).
 Как внести вклад: [CONTRIBUTING.md](../CONTRIBUTING.md).
 
