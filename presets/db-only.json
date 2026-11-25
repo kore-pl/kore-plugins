@@ -7,27 +7,27 @@
   "plugins": [
     {
       "id": "db-mysql",
-      "version": "0.5.2",
+      "version": "0.5.3",
       "desired": "enabled"
     },
     {
       "id": "db-postgres",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "desired": "disabled"
     },
     {
       "id": "file",
-      "version": "0.3.5",
+      "version": "0.3.6",
       "desired": "enabled"
     },
     {
       "id": "backup",
-      "version": "0.5.2",
+      "version": "0.5.3",
       "desired": "enabled"
     },
     {
       "id": "redis",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "desired": "enabled"
     }
   ]

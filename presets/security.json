@@ -7,27 +7,27 @@
   "plugins": [
     {
       "id": "ssh-guard",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "desired": "enabled"
     },
     {
       "id": "integrity",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "desired": "enabled"
     },
     {
       "id": "ssl",
-      "version": "0.8.0",
+      "version": "0.8.1",
       "desired": "enabled"
     },
     {
       "id": "firewall",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "desired": "enabled"
     },
     {
       "id": "waf",
-      "version": "0.5.1",
+      "version": "0.5.2",
       "desired": "enabled"
     }
   ]
