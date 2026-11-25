@@ -12,7 +12,7 @@
     },
     {
       "id": "db-postgres",
-      "version": "0.3.4",
+      "version": "0.4.0",
       "desired": "disabled"
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "id": "backup",
-      "version": "0.5.1",
+      "version": "0.5.2",
       "desired": "enabled"
     },
     {

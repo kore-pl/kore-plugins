@@ -60,6 +60,10 @@
       {
         "version": "0.4.4",
         "sha256": "c91ddced481d7bcc8df1880446af7b2a190a5df0c5ee50a6fb9e32265093431e"
+      },
+      {
+        "version": "0.8.1",
+        "sha256": "d652b23b4b79026dfa4dd16b6566a9c0c1862ed18b9c86d13d444c35a953943a"
       }
     ],
     "file": [
@@ -128,6 +132,10 @@
       {
         "version": "0.7.1",
         "sha256": "8c8c3acf4888586961daaddb34f86961ab4b9d5a071ae0dc0497cad2439428ec"
+      },
+      {
+        "version": "0.8.0",
+        "sha256": "e9b0a8513b226f605f9bd71f02fe52def8532923b5e00fc223372a91af02165e"
       }
     ],
     "integrity": [
@@ -170,6 +178,10 @@
       {
         "version": "0.5.1",
         "sha256": "22f9ec4849045c890db547c042a9c6d78d763071664fd94b89a4aac560b4f8e3"
+      },
+      {
+        "version": "0.6.0",
+        "sha256": "b9b88073907ec453a2cbfff89702b266d42d57143426068f2a71207cfdec0d5e"
       }
     ],
     "cron": [
@@ -204,6 +216,10 @@
       {
         "version": "0.7.0",
         "sha256": "23a58e0b82a4d002b20d0af33ef81f0937549c361254d0080e7af5de7c3af1e5"
+      },
+      {
+        "version": "0.9.0",
+        "sha256": "a138edf6d9889e0516e4337a9583c1986473f7ad2b7fbfb94e5039f9f52c1f5b"
       }
     ],
     "ssh-guard": [
@@ -238,6 +254,10 @@
       {
         "version": "0.3.1",
         "sha256": "260af4b5b0cc305ae296b605dbb6e5920449fdcf8951375cb00892c0947d9b3f"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "6aa254488e62ce0416156659b62a87c1824a90a1be7d9a9a40740d88f6195a5e"
       }
     ],
     "monitor": [
@@ -264,6 +284,10 @@
       {
         "version": "0.3.1",
         "sha256": "86fed8f21fdffc970cdb3ed3ce2c05152411070950a358374f85c6a35a06bd3c"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "d563ec64eafb98c4e8f88abdf3ec04c5e592c88e2543e6c6119069e0533f0424"
       }
     ],
     "logs": [
@@ -370,6 +394,10 @@
       {
         "version": "0.2.2",
         "sha256": "11fc63366f0e93bbf8b6693add0e8e86e7bcf634367a21d51e9adfac125233bc"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "ad5d99bb82dee7b5ac47b670e01d009eef40e12b0c095749151f2c95865c79d2"
       }
     ],
     "runtime-node": [
@@ -404,6 +432,10 @@
       {
         "version": "0.2.5",
         "sha256": "541fff7d1f1595c99c82bc4dc3008bc8b815bde369da068cd8403244d5243da7"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "541ba6e68dce6a6d47f14109212d7812b9b67350685c0f054f43f213d10be331"
       }
     ],
     "runtime-python": [
@@ -442,6 +474,10 @@
       {
         "version": "0.3.2",
         "sha256": "56348766fd3962d0ca8aacfc1caded7f54af446d1572ac360e7347d03350786e"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "05ce6b032f2b335d362df6f9886dbb32c32298572641bbc63bc62f61f0dfaa8c"
       }
     ],
     "db-mysql": [
@@ -514,6 +550,10 @@
       {
         "version": "0.3.4",
         "sha256": "3f1e228b1028b4de2ee55638ed38288bda48e525258d23cac13dc5f4d0487855"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "27a0af99c036cae9375d84306aaf6e9093d14c1cb118795d0adbc4df9c06ae9c"
       }
     ],
     "redis": [
@@ -570,6 +610,10 @@
       {
         "version": "0.5.1",
         "sha256": "bc202ac6dd59dca798ad3895baa8a7f6fc1794c5e31336b992e5e5e91a30e29c"
+      },
+      {
+        "version": "0.5.2",
+        "sha256": "51420c5f89feb6a40a252359a3dc594bd497882a4194e26a87c05afe778de317"
       }
     ],
     "firewall": [
@@ -596,6 +640,10 @@
       {
         "version": "0.2.6",
         "sha256": "f034229f4fdf6db2a06a679aff583c848191b9918ef7f29166a24397f0b9f44e"
+      },
+      {
+        "version": "0.3.0",
+        "sha256": "6b2acbb629c6c2bef5c7ec94c9c1f2e57a6d798189f7326ebb392f8c4276bf42"
       }
     ],
     "waf": [
@@ -634,6 +682,10 @@
       {
         "version": "0.4.5",
         "sha256": "94680629192b3f000496a9b6c713e8de66ca8691f9958e941262dff953b934bd"
+      },
+      {
+        "version": "0.5.1",
+        "sha256": "b9714d773960265d18843adbe8c9a3a16868881e4862f3ec2cf53a97ccf18f2c"
       }
     ],
     "container": [
@@ -676,6 +728,10 @@
       {
         "version": "0.5.5",
         "sha256": "5d467fc4583b2627e43cf6df0e0a04aac1f3c5fd0fb6157f3b6f252692665e9c"
+      },
+      {
+        "version": "0.6.0",
+        "sha256": "b28db2a9328dfdfcc9781f5cd5d40f394280428c8faea66e9eec7a973660a19c"
       }
     ],
     "app-deploy": [
@@ -710,6 +766,10 @@
       {
         "version": "0.3.3",
         "sha256": "3253c1a72a9ec098f985e97f8b8a3d128508f5dc328e4b6fcd9f212c55bbcb39"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "c3412dbe1b004221468e802683b7d31ba6211eda50f4652edebdc8dc8c4175d1"
       }
     ],
     "terminal": [

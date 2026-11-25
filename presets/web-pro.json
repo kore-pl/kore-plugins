@@ -7,17 +7,17 @@
   "plugins": [
     {
       "id": "site",
-      "version": "0.4.4",
+      "version": "0.8.1",
       "desired": "enabled"
     },
     {
       "id": "ssl",
-      "version": "0.7.1",
+      "version": "0.8.0",
       "desired": "enabled"
     },
     {
       "id": "monitor",
-      "version": "0.3.1",
+      "version": "0.5.0",
       "desired": "enabled"
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "id": "runtime-php",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "desired": "enabled"
     },
     {
