@@ -1,21 +1,15 @@
 name: CI
 
-# 2026-11-23 策略：CI 只做兜底，少触发——push main / tag v* / PR / 手动。
-# 索引仓只有静态数据与校验脚本：check 跑仓内门禁，oss 校验九件套与占位残留。
+# 触发（2026-11-25 用户裁决）：GitHub Actions **只有 workflow_dispatch**——push（main / tag）与
+# pull_request 全部删掉，镜像侧 push / tag 绝不自动触发 GitHub CI；版本触发迁移到 Gitea Actions
+# (.gitea/workflows/ci.yml，push tag v* + 手动)。日常反馈用本地 `make check`。
 #
 # 签名分层（方案 A：签名由发布方在权威源 Gitea 执行，私钥不入库、不进任何 GitHub secret）：
-#   pull_request         → KORE_INDEX_SKIP_SIG=1 make check：只验 schema / 版本账本 / 预设引用。
-#                          贡献者没有私钥，改内容就无法提供有效 .sig；PR 上验签必然红，
-#                          会把正常贡献挡在门外。
-#   push main / tag      → 全量 make check：含 ed25519 验签，未签 / 错签 / 内容与 .sig 不一致即红。
-#                          （workflow_dispatch 也走全量，手动触发通常发生在权威源或镜像 main 上。）
-# 本工作流不持有、也不需要任何签名密钥；权限保持只读。
+#   workflow_dispatch → 全量 make check：含 ed25519 验签，未签 / 错签 / 内容与 .sig 不一致即红。
+#   本工作流不持有、也不需要任何签名密钥；权限保持只读。
 on:
-  push:
-    branches: ["main"]
-    tags: ["v*"]
-  pull_request:
   workflow_dispatch:
+
 
 permissions:
   contents: read

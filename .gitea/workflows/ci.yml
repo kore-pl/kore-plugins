@@ -1,0 +1,68 @@
+name: CI (Gitea)
+
+# 触发（2026-11-25 用户裁决「gitea 可以按版本 ci，github 必须是主动触发」）：
+#   push tag v* + 手动 workflow_dispatch；GitHub 侧 .github/workflows/ci.yml 只有 workflow_dispatch。
+#   job 主体复用 .github/workflows/ci.yml 的 steps（单一真源）。
+#   前置：Gitea 服务端必须开启 Actions 且注册可用 act_runner；本仓只提供配置，服务端状态未验证。
+#
+# 签名分层（方案 A）：签名由发布方在权威源 Gitea 执行，私钥不入库、不进任何 CI secret；
+#   本工作流只验签不签名：make check 全量含 ed25519 验签，未签 / 错签 / 内容与 .sig 不一致即红。
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gitea-ci-${{ gitea.ref }}
+  cancel-in-progress: true
+
+jobs:
+  index:
+    name: Index + presets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: make check（全量含 ed25519 验签）
+        run: make check
+
+      - name: 索引 JSON 可解析
+        run: |
+          python3 -c 'import json; json.load(open("index/plugins.json", encoding="utf-8"))'
+          python3 -c 'import json; json.load(open("index/versions.lock.json", encoding="utf-8"))'
+
+  oss:
+    name: OSS assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 九件套 / LICENSE / 占位残留
+        run: |
+          set -eu
+          files="CONTRIBUTING.md SECURITY.md CODE_OF_CONDUCT.md AGENTS.md \
+                 .github/PULL_REQUEST_TEMPLATE.md \
+                 .github/ISSUE_TEMPLATE/bug_report.yml \
+                 .github/ISSUE_TEMPLATE/feature_request.yml \
+                 .github/ISSUE_TEMPLATE/config.yml \
+                 .github/workflows/ci.yml \
+                 .gitea/workflows/ci.yml"
+          for f in $files; do
+            [ -f "$f" ] || { echo "[FAIL] 缺 $f"; exit 1; }
+          done
+          grep -qF 'MIT License' LICENSE || { echo "[FAIL] LICENSE 缺 MIT License"; exit 1; }
+          grep -qF 'Permission is hereby granted' LICENSE || { echo "[FAIL] LICENSE 缺 MIT 许可句"; exit 1; }
+          grep -qF '<!-- oss:begin -->' README.md || { echo "[FAIL] README 缺 oss:begin"; exit 1; }
+          grep -qF '<!-- oss:end -->' README.md || { echo "[FAIL] README 缺 oss:end"; exit 1; }
+          stale="$(grep -nF '{{' $files | grep -vF '${{' || true)"
+          if [ -n "$stale" ]; then
+            echo "[FAIL] 生成文件残留占位符："
+            echo "$stale"
+            exit 1
+          fi
+          echo "[OK] 九件套 / LICENSE / 占位符检查通过"
