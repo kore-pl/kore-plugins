@@ -1,6 +1,6 @@
 # Changelog
 
-## [未发布]
+## 0.1.0 — 2026-11-26
 
 ### 新增
 - 补齐七语言（zh/en/es/fr/de/ru/pt）`DETAIL` 文档与 `locale/*.json`、README 语言切换行与 star 提示；无日语文件、无死链，JSON 校验通过。
