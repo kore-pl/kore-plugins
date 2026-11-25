@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # Go module dependencies for the kernel / plugins.
+  - package-ecosystem: gomod
+    directory: '/'
+    schedule:
+      interval: weekly
+
+  # npm kept for parity with the six-standard template; a no-op on repos
+  # without package.json and harmless once one is introduced.
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: weekly
+
+  # Keep CI/build actions current.
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: weekly

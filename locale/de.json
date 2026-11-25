@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "kore-plugins",
+    "description": "Statisches Plugin-Index-Repository für Kore: veröffentlicht plugins.json, Signatur, Versionsbuch, Szenario-Presets und eine statische Marktseite mit Validierungsskripten; keine Prüfung, keine Paketverwahrung, keine Konten, kein Server.",
+    "detail": "docs/DETAIL.de.md"
+  }
+}

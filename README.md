@@ -1,5 +1,7 @@
 # kore-plugins
 
+语言：[简体中文](docs/DETAIL.md) · [English](docs/DETAIL.en.md) · [Español](docs/DETAIL.es.md) · [Français](docs/DETAIL.fr.md) · [Deutsch](docs/DETAIL.de.md) · [Русский](docs/DETAIL.ru.md) · [Português](docs/DETAIL.pt.md)
+
 kore 的**纯静态插件索引仓**：只发布 `index/`（`plugins.json` / `plugins.json.sig` / `versions.lock.json`）、`presets/*.json` 与静态市场页 `market/`，并带一套校验脚本；不审核、不代管包、无账号、无服务端。
 
 > 状态: M2 · 归属: M2-B / M5-B · 更新: 2026-11-23
@@ -139,5 +141,7 @@ KORE_INDEX_SKIP_SIG=1 make check    # 聚合但跳过验签（只给 PR schema �
 - **索引 schema**：`schema_version=1`；`plugins[]` 每条必填 `id` / `name` / `version` / `depth_level` / `lifecycle` / `size_bytes` / `sha256` / `download_url` / `requires_kore` / `depends_on` / `conflicts` / `scenario_tags`。同一 `id@version` 只允许一个 sha（`index/versions.lock.json` 对账）。
 - **校验**：本地 `make check` → `scripts/validate-presets.sh` + `scripts/validate-index.sh`（含 ed25519 验签；GitHub CI 只手动触发、Gitea CI 按版本 tag 触发，以本地为准）。
 - **相关仓库**：[kore](https://github.com/kore-pl/kore) · [协议文档](https://github.com/kore-pl/kore/blob/main/docs/PLUGIN-PROTOCOL.md) · [SDK 指南](https://github.com/kore-pl/kore/blob/main/docs/PLUGIN-SDK.md)
+
+喜欢这个免审核、离线可用的插件索引吗？欢迎给仓库点一个 ⭐ star，让更多人发现 kore 的插件生态；想帮忙维护索引就从 [CONTRIBUTING.md](CONTRIBUTING.md) 开始。
 
 <!-- oss:end -->

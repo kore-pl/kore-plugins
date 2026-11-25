@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "kore-plugins",
+    "description": "Dépôt d’index statique des plugins pour kore : publie plugins.json, sa signature, le registre des versions, des préréglages et une page de marché statique avec scripts de validation ; sans revue, garde des paquets, compte ni serveur.",
+    "detail": "docs/DETAIL.fr.md"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "kore-plugins",
+    "description": "kore 的纯静态插件索引仓：只发布 plugins.json/签名/版本账本、场景预设与静态市场页，带校验脚本；不审核、不代管包、无账号、无服务端。",
+    "detail": "docs/DETAIL.md"
+  }
+}

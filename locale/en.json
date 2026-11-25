@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "kore-plugins",
+    "description": "The static plugin index repository for kore: publishes plugins.json, its signature, version ledger, scenario presets and a static marketplace page with validation scripts; no review, no package custody, no account, no server.",
+    "detail": "docs/DETAIL.en.md"
+  }
+}

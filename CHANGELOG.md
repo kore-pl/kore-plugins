@@ -1,5 +1,12 @@
 # Changelog
 
+## [未发布]
+
+### 新增
+- 补齐七语言（zh/en/es/fr/de/ru/pt）`DETAIL` 文档与 `locale/*.json`、README 语言切换行与 star 提示；无日语文件、无死链，JSON 校验通过。
+- 新增六语言 `SECURITY` 译文、`.github/dependabot.yml`（gomod/npm/github-actions weekly）与 `.github/CODEOWNERS`。
+- `CONTRIBUTING.md` 写明 Git Flow 分支模型（kebab-case 命名、release/hotfix 双向合流、`--no-ff`、SSH 签名 tag 约定）。
+
 ## 0.2.4 — 2026-11-23
 
 - `app-deploy` 0.1.1 → 0.2.0 入索引：内置 4 模板真部署（nginx / wordpress / redis / postgres），方法 `app-deploy.templates` 返回模板清单；`sha256` / `size_bytes` / `download_url` 同步，`versions.lock.json` 追加 0.2.0（sha `56ee94417068…5ba34`）。

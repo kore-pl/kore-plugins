@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "kore-plugins",
+    "description": "Repositorio de índice estático de plugins para kore: publica plugins.json, su firma, el libro de versiones, preajustes y una página de mercado estática con scripts de validación; sin revisión, custodia, cuentas ni servidor.",
+    "detail": "docs/DETAIL.es.md"
+  }
+}

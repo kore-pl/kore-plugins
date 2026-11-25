@@ -44,6 +44,23 @@
 
 反向验证是硬要求：临时副本里把任一 `sha256` 改一个字符、注入未知插件 id 或第 4 个常驻插件，`make check` 必须以 `[FAIL]` 非 0 退出；正例必须 exit 0。贡献者用 `KORE_INDEX_SKIP_SIG=1 make check` 做这一步即可；**「改一字节 → 验签失败」这条反例属于发布方**，由维护者在重签后验收（见 §2.1），贡献者无需也无法复现。
 
+## 3.1 Git Flow 分支模型
+
+本仓采用 Git Flow：长期分支 `main`（发布 / 索引权威源）与 `develop`（本地开发集成分支）；其余都是短生命周期分支，用完即删。分支名一律小写英文 + 连字符（kebab-case）。
+
+| 分支 | 从哪开 | 合回哪 | 用途 |
+| --- | --- | --- | --- |
+| `feature/*` | `develop` | `develop` | 新条目 / 新预设 / 新校验能力 |
+| `fix/*` | `develop` | `develop` | 非紧急修复 |
+| `release/*` | `develop` | **`main` + `develop` 双向** | 发布冻结，与 tag 同号，用 `--no-ff` 合流 |
+| `hotfix/*` | `main` | **`main` + `develop` 双向** | 已发布版本的紧急修复 |
+
+`release/*` 与 `hotfix/*` 必须双向合流：`main` 上的索引发布改动要回灌 `develop`，否则两条线分叉、下个版本丢修复。不 force push、不 rebase、不改写已有 tag、不改 GitHub 默认分支、不 push 普通分支到镜像仓；回退用追加 revert 提交。
+
+### 签名约定
+
+本仓已按参考仓对齐 SSH 签名配置（`git config --local`，不入库）：`gpg.format=ssh`、`user.signingkey=/home/pt/.ssh/id_ed25519_github_docker_panel.pub`、`tag.gpgSign=true`、`gpg.ssh.allowedSignersFile=<repo>/.git/allowed_signers`。版本 tag 用 `git tag -s vX.Y.Z -m "中文说明"` 显式 SSH 签名，切勿用未签名的 `git tag -a`；用 `git tag -v vX.Y.Z` 校验，应见 `Good "git" signature`。索引内容本身的 ed25519 签名（`plugins.json.sig`）是另一条链，由发布方维护，见 §2.1 与 §5。
+
 ## 4. 提交与 PR
 
 - 提交信息：`type(scope): 中文描述`，type ∈ `feat` / `fix` / `perf` / `refactor` / `docs` / `test` / `chore` / `build`。
