@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "full",
   "name": "全量",
-  "description": "引用索引中全部 21 个插件：site/echo/monitor 三个 resident 默认启用（常驻 3/3），其余 18 个 lazy 插件引用但默认 disabled、按需启用；含 basic 级插件，非开箱可用。db-mysql 与 db-postgres 索引声明互斥，两者均引用但仅 db-mysql 可由用户按场景启用。",
+  "description": "引用 21 个场景插件：site 为 resident 且默认启用（本预设唯一常驻，声明 8 MiB）；索引全局 resident 仅 site 与 terminal 两个（符合推荐 ≤2），本预设未引用 terminal；echo / monitor 及其余插件均为 lazy、按需启用；含 basic 级插件，非开箱可用。db-mysql 与 db-postgres 索引声明互斥，两者均引用但仅 db-mysql 可由用户按场景启用。",
   "out_of_box": false,
   "plugins": [
     {

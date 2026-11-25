@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "dev",
   "name": "开发验证",
-  "description": "开发联调场景：echo 验证插件（唯一常驻）、runtime-node 与 runtime-python 运行时；三者均为 basic 深度，非开箱可用。",
+  "description": "开发联调场景：echo 验证插件、runtime-node 与 runtime-python 运行时均为 lazy 按需启用（无默认常驻）；三者均为 basic 深度，非开箱可用。",
   "out_of_box": false,
   "plugins": [
     {
