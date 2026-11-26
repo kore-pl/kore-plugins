@@ -806,6 +806,10 @@
       {
         "version": "0.5.3",
         "sha256": "313757ed25291d64a92f343e004e053bee6a47dcf4753bfbe9113d8a3c749908"
+      },
+      {
+        "version": "0.5.4",
+        "sha256": "6873f0d317b736664979782514bace6514cc9de851ca5c6df81550afd31d9a7c"
       }
     ],
     "container": [
