@@ -450,6 +450,10 @@
       {
         "version": "0.3.1",
         "sha256": "e2c09db35c6997e6f0b248c3ad5538f0980b5e7c62095e0a3753ea714553a113"
+      },
+      {
+        "version": "0.3.2",
+        "sha256": "cd9ae451bb4d535f66fef68462e77118d6acfc75ac18e957810c11ab47da6893"
       }
     ],
     "runtime-node": [
@@ -492,6 +496,10 @@
       {
         "version": "0.3.1",
         "sha256": "2e05abeaf6d1e254d2b0115604970eb9d89f246865700fd081a3c4537d883ff0"
+      },
+      {
+        "version": "0.3.2",
+        "sha256": "135980a94940ea8eb2d60aa3f64609602c6d5bd48194bb1f896d180c21fa3e44"
       }
     ],
     "runtime-python": [
@@ -538,6 +546,10 @@
       {
         "version": "0.4.1",
         "sha256": "a40d9f7f3487520e07aeafa16289f3d9c94133592879a74eba88c4835445c613"
+      },
+      {
+        "version": "0.4.2",
+        "sha256": "d8d2d16fc6feaa194c8354ce6abc2ada435f420fff0bafcc7a8ae28bfe458ce6"
       }
     ],
     "db-mysql": [
@@ -622,6 +634,10 @@
       {
         "version": "0.4.1",
         "sha256": "2fdb846eaf1de609c353698416a21d39dc3eb739e67f9a78ae2951e8825211df"
+      },
+      {
+        "version": "0.4.2",
+        "sha256": "b2d86eda6397b30c14ef18235350363dcb6aa8f500c211677649b66b678f97f0"
       }
     ],
     "redis": [
@@ -724,6 +740,10 @@
       {
         "version": "0.3.1",
         "sha256": "129ce42ae9647c8f08dd4909daea882483ea2549e0c8717a6bde05402b0eaf56"
+      },
+      {
+        "version": "0.3.2",
+        "sha256": "0459006143c8d7d50d09bf22ba5907ba23d2ea61545b2d22db66529fa0d816cc"
       }
     ],
     "waf": [
@@ -770,6 +790,10 @@
       {
         "version": "0.5.2",
         "sha256": "801e3724cbd1f56b7b0ea6bcfaebe2d4b852794737e86413cfdf6e102f4474e8"
+      },
+      {
+        "version": "0.5.3",
+        "sha256": "313757ed25291d64a92f343e004e053bee6a47dcf4753bfbe9113d8a3c749908"
       }
     ],
     "container": [
@@ -862,6 +886,10 @@
       {
         "version": "0.4.1",
         "sha256": "e83e553379ef4c0dc0d6fa017f8dbae592aadcfd103b0b93115bd4a407bc284d"
+      },
+      {
+        "version": "0.4.2",
+        "sha256": "9cb53ea2a7fc0d0cbc3ae4b93ba304078bc13d65442e33a1aced26f94899e9f9"
       }
     ],
     "terminal": [

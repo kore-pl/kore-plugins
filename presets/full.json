@@ -57,17 +57,17 @@
     },
     {
       "id": "runtime-php",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "desired": "disabled"
     },
     {
       "id": "runtime-node",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "desired": "disabled"
     },
     {
       "id": "runtime-python",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "desired": "disabled"
     },
     {
@@ -77,7 +77,7 @@
     },
     {
       "id": "db-postgres",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "desired": "disabled"
     },
     {
@@ -92,12 +92,12 @@
     },
     {
       "id": "firewall",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "desired": "disabled"
     },
     {
       "id": "waf",
-      "version": "0.5.2",
+      "version": "0.5.3",
       "desired": "disabled"
     },
     {
@@ -107,7 +107,7 @@
     },
     {
       "id": "app-deploy",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "desired": "disabled"
     }
   ]
