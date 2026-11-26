@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # PR：贡献者无私钥 → 跳过验签，只验 schema / 账本 / 预设（脚本会打印「已跳过」）。
       - name: make check（PR：schema / 账本 / 预设，跳过验签）
@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: 九件套 / LICENSE / 占位残留
         run: |
