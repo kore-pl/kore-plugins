@@ -454,6 +454,10 @@
       {
         "version": "0.3.2",
         "sha256": "cd9ae451bb4d535f66fef68462e77118d6acfc75ac18e957810c11ab47da6893"
+      },
+      {
+        "version": "0.4.0",
+        "sha256": "8e500b28cae4da6e08a5e47160a4f0ba17c734173438026b95b9582de4015a6e"
       }
     ],
     "runtime-node": [
