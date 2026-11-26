@@ -504,6 +504,10 @@
       {
         "version": "0.4.0",
         "sha256": "1b531e1a5e80bc395124348c6de319cc7a68f7eb65c2bd9362ddd99748524c4a"
+      },
+      {
+        "version": "0.4.1",
+        "sha256": "d9e7d17029ffacbc0160ccb8161569785f92c612bdfb4f94b9c12e78c6ae140a"
       }
     ],
     "runtime-python": [
