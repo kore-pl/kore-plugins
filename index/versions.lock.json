@@ -650,6 +650,10 @@
       {
         "version": "0.4.2",
         "sha256": "b2d86eda6397b30c14ef18235350363dcb6aa8f500c211677649b66b678f97f0"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "c3bf8e3342cf1ee7526833ddc1ac71b585a0c1514034830c2aa666d779b0ecc6"
       }
     ],
     "redis": [
