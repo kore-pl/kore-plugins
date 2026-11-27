@@ -730,6 +730,10 @@
       {
         "version": "0.5.3",
         "sha256": "5b29387586c87425e106f6c32afac77a82b649aeb3828a6a1203b7b96a593dd3"
+      },
+      {
+        "version": "0.6.0",
+        "sha256": "26519393c5ee8b2b05eeb499d0fff0cb9ce8956e344170ce75315c621b49b74e"
       }
     ],
     "firewall": [
