@@ -566,6 +566,10 @@
       {
         "version": "0.4.2",
         "sha256": "d8d2d16fc6feaa194c8354ce6abc2ada435f420fff0bafcc7a8ae28bfe458ce6"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "cc9d8712575f6d04c4192c9ceb25aaf5732a516b1bdcd6c3f71b07b20182252a"
       }
     ],
     "db-mysql": [
