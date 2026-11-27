@@ -654,6 +654,10 @@
       {
         "version": "0.5.0",
         "sha256": "c3bf8e3342cf1ee7526833ddc1ac71b585a0c1514034830c2aa666d779b0ecc6"
+      },
+      {
+        "version": "0.6.0",
+        "sha256": "eaee8be25b02d9d6cb08d34ae09ced9e75e6bf7ae9b1e9b9c4c920eca47be948"
       }
     ],
     "redis": [

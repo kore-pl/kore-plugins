@@ -236,12 +236,12 @@
     {
       "id": "db-postgres",
       "name": "PostgreSQL 管理插件",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "depth_level": "basic",
       "lifecycle": "lazy",
-      "size_bytes": 1676081,
-      "sha256": "c3bf8e3342cf1ee7526833ddc1ac71b585a0c1514034830c2aa666d779b0ecc6",
-      "download_url": "https://github.com/kore-pl/kore-plugin-db-postgres/releases/download/v0.5.0/db-postgres-0.5.0.tar.gz",
+      "size_bytes": 1676869,
+      "sha256": "eaee8be25b02d9d6cb08d34ae09ced9e75e6bf7ae9b1e9b9c4c920eca47be948",
+      "download_url": "https://github.com/kore-pl/kore-plugin-db-postgres/releases/download/v0.6.0/db-postgres-0.6.0.tar.gz",
       "requires_kore": ">=0.1.0 <0.2.0",
       "depends_on": [],
       "conflicts": [
