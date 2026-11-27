@@ -42,7 +42,7 @@
     },
     {
       "id": "monitor",
-      "version": "0.5.1",
+      "version": "0.6.0",
       "desired": "enabled"
     },
     {
@@ -57,12 +57,12 @@
     },
     {
       "id": "runtime-php",
-      "version": "0.3.2",
+      "version": "0.4.0",
       "desired": "disabled"
     },
     {
       "id": "runtime-node",
-      "version": "0.3.2",
+      "version": "0.4.1",
       "desired": "disabled"
     },
     {
@@ -77,7 +77,7 @@
     },
     {
       "id": "db-postgres",
-      "version": "0.4.2",
+      "version": "0.6.0",
       "desired": "disabled"
     },
     {
@@ -97,7 +97,7 @@
     },
     {
       "id": "waf",
-      "version": "0.5.3",
+      "version": "0.5.4",
       "desired": "disabled"
     },
     {
