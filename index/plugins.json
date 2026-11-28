@@ -103,13 +103,13 @@
     {
       "id": "ssh-guard",
       "name": "SSH 加固插件",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "depth_level": "basic",
       "lifecycle": "lazy",
-      "size_bytes": 2866035,
-      "sha256": "8d1c5c7737f89a4cab2b85e63fffaaa8b3ca987619b7780dc5f2db27e4085a14",
-      "download_url": "https://github.com/kore-pl/kore-plugin-ssh-guard/releases/download/v0.4.1/ssh-guard-0.4.1.tar.gz",
-      "requires_kore": ">=0.1.0 <0.2.0",
+      "size_bytes": 2880509,
+      "sha256": "c380cb6c3a9c86b13c50438c7fd62b80391df3da531e703805002f54f38f2ccb",
+      "download_url": "https://github.com/kore-pl/kore-plugin-ssh-guard/releases/download/v0.5.0/ssh-guard-0.5.0.tar.gz",
+      "requires_kore": ">=0.1.6 <0.2.0",
       "depends_on": [],
       "conflicts": [],
       "scenario_tags": [

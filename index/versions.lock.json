@@ -294,6 +294,10 @@
       {
         "version": "0.4.1",
         "sha256": "8d1c5c7737f89a4cab2b85e63fffaaa8b3ca987619b7780dc5f2db27e4085a14"
+      },
+      {
+        "version": "0.5.0",
+        "sha256": "c380cb6c3a9c86b13c50438c7fd62b80391df3da531e703805002f54f38f2ccb"
       }
     ],
     "monitor": [
